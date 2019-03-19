@@ -24,18 +24,19 @@ sys.path.insert(0, os.path.abspath('../../'))
 print(os.getcwd())
 # -- Build the documenation for the c++ and python code -------------------
 # build docu for c++ code
-subprocess.call('cd ../.. ; doxygen doc/Doxyfile;', shell=True)
-subprocess.call(
-    'cd .. ; breathe-apidoc -o source/cpp -p ComPWA -g class,struct,file,namespace,group xml',
-    shell=True)
+#subprocess.call('cd ../.. ; doxygen doc/Doxyfile;', shell=True)
+#subprocess.call(
+#    'cd .. ; breathe-apidoc -o source/cpp -p ComPWA -g class,struct,file,namespace,group xml',
+#    shell=True)
 #build docu for python code
-subprocess.call(
-    'cd .. ; sphinx-apidoc -f -d 4 -e -o source/expertsystem ../Physics/ExpertSystem/',
-    shell=True)
-subprocess.call(
-    'cd .. ; sphinx-apidoc -f -d 4 -e -o source/plotting ../Tools/Plotting/',
-    shell=True)
+#subprocess.call(
+#    'cd .. ; sphinx-apidoc -f -d 4 -e -o source/expertsystem ../Physics/ExpertSystem/',
+#    shell=True)
+#subprocess.call(
+#    'cd .. ; sphinx-apidoc -f -d 4 -e -o source/plotting ../Tools/Plotting/',
+#    shell=True)
 
+subprocess.call('jupyter nbconvert --to rst ../../Examples/jupyter/*.ipynb; mv ../../Examples/jupyter/*.rst ./examples/.', shell=True)
 
 # -- General configuration ------------------------------------------------
 
@@ -53,8 +54,13 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
 #    'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
-    'breathe'
+    'breathe',
+    'nbsphinx',
+    'nbsphinx_link'
 ]
+exclude_patterns = ['_build', '**.ipynb_checkpoints']
+
+nbsphinx_execute = 'never'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -70,7 +76,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'ComPWA'
-copyright = '2018, Mathias Michel, Stefan Pflueger, Peter Weidenkaff'
+copyright = '2019, Mathias Michel, Stefan Pflueger, Peter Weidenkaff'
 author = 'Mathias Michel, Stefan Pflueger, Peter Weidenkaff'
 
 # The version info for the project you're documenting, acts as replacement for

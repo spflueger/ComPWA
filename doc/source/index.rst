@@ -14,6 +14,7 @@ get things running. Have fun!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
 
    overview
    quickstart
