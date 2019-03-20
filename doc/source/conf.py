@@ -38,7 +38,7 @@ subprocess.call(
 
 subprocess.call(
     'jupyter nbconvert --to rst ../../Examples/jupyter/*.ipynb; '
-    'mv ../../Examples/jupyter/*.rst ./examples/.', shell=True)
+    'mkdir examples; mv ../../Examples/jupyter/*.rst ./examples/.', shell=True)
 
 # -- General configuration ------------------------------------------------
 
