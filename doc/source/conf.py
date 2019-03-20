@@ -25,9 +25,9 @@ print(os.getcwd())
 # -- Build the documenation for the c++ and python code -------------------
 # build docu for c++ code
 subprocess.call('cd ../.. ; doxygen doc/Doxyfile;', shell=True)
-# subprocess.call(
-#    'cd .. ; breathe-apidoc -f -o source/cpp -p ComPWA -g class,file xml',
-#    shell=True)
+subprocess.call(
+    'cd .. ; breathe-apidoc -f -o source/cpp -p ComPWA -g file xml',
+    shell=True)
 # build docu for python code
 subprocess.call(
     'cd .. ; sphinx-apidoc -f -d 4 -e -o source/expertsystem ../Physics/ExpertSystem/',

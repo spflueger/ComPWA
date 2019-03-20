@@ -13,8 +13,8 @@ documentation of the ongoing development!
    overview
    quickstart
    installation
-   modules
-   expertsystem
+   cpp-modules
+   python-modules
    python-ui
    examples
    faq
