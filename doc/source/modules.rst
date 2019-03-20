@@ -15,12 +15,17 @@ The 4 main component groups in ComPWA are:
 
 (There is one more group, Tools. It contains tools that do not belong specifically to one of these groups)
 
+The Data Modules
+----------------
 
 The data component group is responsible for:
 
 - transformation of data
 - data IO
 - data generation (generators should be moved from tools to here)
+
+.. doxygennamespace:: ComPWA::Data
+   :project: ComPWA
 
 
 The Physics component group consists of several subcomponents:
