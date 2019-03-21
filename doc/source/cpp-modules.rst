@@ -1,46 +1,47 @@
 C++ Modules
 ===========
 
+All of the c++ code belongs to one of the 4 main module groups in ComPWA,
+which are:
 
-Ok here we can ask ourselves, what the "Core" library is really needed for.
-I think all of the classes or files belong to one of the 4 groups.
+- Data
+- Physics/Models
+- Esimators
+- Optimizers
 
+There is another supplementary module group `Tools`, which contains for example
+integration algorithms.
 
-The 4 main component groups in ComPWA are:
+Data Modules
+------------
 
--Data
--Physics/Models
--Esimators
--Optimaizers
+The Data modules is responsible for:
 
-(There is one more group, Tools. It contains tools that do not belong specifically to one of these groups)
-
-The Data Modules
-----------------
-
-The data component group is responsible for:
-
-- transformation of data
-- data IO
+- transformation of different data structures
+- data input/output
 - data generation (generators should be moved from tools to here)
 
-.. doxygennamespace:: ComPWA::Data
-   :project: ComPWA
 
+Physics Modules
+---------------
 
-The Physics component group consists of several subcomponents:
+The Physics modules
 
-- definitions of all physics models (helicty formalism, ...)
-  -> they use the intensity and amplitude interface
-  -> they need the data to be evaluated, so as an input
-- definition of kinematics class and its interface
-  -> they are responsible for transforming Event ../Tools/Plotting/ROOT/DalitzPlot.cppbased data to the kinematic variables
-     that are needed by the underlying theory of a model.
-  -> they take data as an input and output
+- define Intensities and Amplitudes of physics models/theories
+  (i.e. helicty formalism, ...)
+- define Kinematics classes, which are responsible for transforming Event based
+  data to the kinematic variables that are needed by the underlying theory.
 
+Estimator Modules
+-----------------
 
-The estimator is responsible for determining the "closeness" of the model to the data.
-It needs both the data and the data, obviously.
+An estimator is responsible for determining the "closeness" of the model to the data.
+Each estimator module has a specific way to estimate the closeness.
 
+Optimizer Modules
+-----------------
 
-The optimizer needs the estimator, and a set of fit parameters that are obtained from the model.
+The Optimizer modules are responsible for finding the "optimal" set of
+parameters of a model, by minimizing the "closeness" determined by a specific
+Estimator.
+Each Optimizer module implements a specific algorithm for finding the optimum.

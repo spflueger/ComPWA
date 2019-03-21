@@ -3,23 +3,25 @@
 Python UI
 =========
 
-Explain a little how to use the python interface. mention pybind11. 
-mention its the preferred way to use compwa!
-So to construct a model, we do not expect to use or need a dataset, and vice versa. 
-What is the way to use ComPWA:
--First you readin your datasets. Alternatively you can generate new ones.
--However for that you need a intensity or model first.
-The kinematics and the intensity are created hand in hand using the builder.
--If you have not read in data yet you can do that now, 
-or you can generate a dataset with Hit&Miss.
--afterwards its rather straight forward. create an estimator
- and give it the intensity and the data.
--the estimator is given to the optimizer.
+The Python User Interface is a python module named :code:`pycompwa`, built with 
+`pybind11 <https://pybind11.readthedocs.io/en/stable/index.html>`_.
+It is the recommended way to use ComPWA, since the user benefits from the python ease of use.
 
-That's it. It would be straight forward to create the kinematics and the model first.
-The only problem is the integration decorators that need a dataset. 
- So we need to give the decorators some integration strategy interface, 
- so that the model and kinematics can be created first. Then the integration strategy
-  can be actually initialized with a dataset. alternatively we can define a dataset
-   interface, which is empty in the beginning. that is passed to the builder. 
-   then later on we can add actual data to the 
+.. note::
+   Because the Python UI calls the c++ code in the background, you do not have to worry about speed.
+   It runs just as fast ;)
+
+The Python UI enables you to perform all of the tasks needed for your partial wave analysis: 
+
+- load and create and intensity from a description
+- load or generate data samples
+- perform fits
+- save & visualize results
+
+On how to use the Python UI, please refer to the :ref:`examples section<examples>`.
+Below you can find the code documentation of **pycompwa**.
+
+.. automodule:: pycompwa
+   :members:
+   :undoc-members:
+   :show-inheritance:
