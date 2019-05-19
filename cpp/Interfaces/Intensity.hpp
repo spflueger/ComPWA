@@ -5,9 +5,6 @@
 #ifndef COMPWA_INTENSITY_HPP_
 #define COMPWA_INTENSITY_HPP_
 
-#include <memory>
-
-#include "Core/FunctionTree.hpp"
 #include "Core/ParameterList.hpp"
 
 namespace ComPWA {
@@ -22,13 +19,22 @@ struct DataPoint;
 /// final state. However note that an Intensity can be, but does not have to be
 /// normalized.
 ///
-class Intensity : public Optimizable, public FunctionTreeInterface {
+template<typename T>
+class Function {
 public:
-  virtual ~Intensity() = default;
+	virtual ~Function() = default;
 
-  /// evaluate intensity of model at \p point in phase-space
-  virtual double evaluate(const DataPoint &point) const = 0;
+	/// evaluate intensity of model at \p point in phase-space
+	virtual std::vector<T> evaluate(
+			const std::vector<DataPoint> &point) const = 0;
+
+	virtual void updateParametersFrom(const ParameterList &list) = 0;
+
+	virtual ParameterList getParameters() const = 0;
 };
 
-} // namespace ComPWA
+using Intensity = Function<double>;
+using Amplitude = Function<std::complex<double>>;
+
+}
 #endif
