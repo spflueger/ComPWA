@@ -5,8 +5,9 @@
 #ifndef COMPWA_ESTIMATOR_ESTIMATOR_HPP_
 #define COMPWA_ESTIMATOR_ESTIMATOR_HPP_
 
+#include "Intensity.hpp"
+
 namespace ComPWA {
-class ParameterList;
 namespace Estimator {
 
 ///
@@ -14,16 +15,16 @@ namespace Estimator {
 /// of the modeled intensity to the data. Any derived Estimator can be used with
 /// any derived Optimizer.
 ///
-class Estimator {
+template <typename T> class Estimator : public Function<T, void> {
 
 public:
-  virtual ~Estimator(){};
+  virtual ~Estimator() = default;
 
   /// Evaluates the Estimator, which calculates the "distance" of the
   /// Intensity from the DataPoints (or more generally a model from the data).
   /// The Optimizer tries to minimize/optimize the returned value of the
   /// Estimators evaluate function.
-  virtual double evaluate() const = 0;
+  virtual T evaluate() const = 0;
 };
 
 } // namespace Estimator

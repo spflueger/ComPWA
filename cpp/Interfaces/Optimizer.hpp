@@ -5,12 +5,22 @@
 #ifndef COMPWA_OPTIMIZER_HPP_
 #define COMPWA_OPTIMIZER_HPP_
 
-#include <memory>
-
-#include "Core/FitResult.hpp"
-#include "Core/ParameterList.hpp"
+#include "Interfaces/Intensity.hpp"
 
 namespace ComPWA {
+
+template <typename T> struct FitResult {
+  ParameterList InitialParameters;
+  ParameterList FinalParameters;
+
+  double InitialEstimatorValue;
+  double FinalEstimatorValue;
+
+  double RuntimeInSeconds;
+
+  T AdditionalProperties;
+};
+
 namespace Optimizer {
 
 ///
@@ -22,14 +32,11 @@ namespace Optimizer {
 /// other modules are necessary to work with the new optimizer library or
 /// routine.
 ///
-class Optimizer {
-
+template <typename T> class Optimizer {
 public:
-  Optimizer() {}
+  virtual ~Optimizer() = default;
 
-  virtual ~Optimizer() {}
-
-  virtual std::shared_ptr<FitResult> exec(ParameterList &par) = 0;
+  virtual FitResult<T> execute(ParameterList &par) = 0;
 };
 
 } // namespace Optimizer
