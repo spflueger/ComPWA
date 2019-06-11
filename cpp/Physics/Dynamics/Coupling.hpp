@@ -5,8 +5,8 @@
 #ifndef Coupling_h
 #define Coupling_h
 
-#include "Core/FitParameter.hpp"
-#include "Core/Properties.hpp"
+#include "../../Core_old/FitParameter.hpp"
+#include "../../Core_old/Properties.hpp"
 #include "FormFactor.hpp"
 
 namespace ComPWA {

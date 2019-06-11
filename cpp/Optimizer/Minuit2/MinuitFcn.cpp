@@ -6,11 +6,11 @@
 #include <chrono>
 #include <iomanip>
 
-#include "Core/FitParameter.hpp"
-#include "Core/Logging.hpp"
-#include "Core/ParameterList.hpp"
 #include "Estimator/Estimator.hpp"
 #include "MinuitFcn.hpp"
+#include "../../Core_old/FitParameter.hpp"
+#include "../../Core_old/Logging.hpp"
+#include "../../Core_old/ParameterList.hpp"
 
 using namespace ROOT::Minuit2;
 

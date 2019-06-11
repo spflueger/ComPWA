@@ -8,8 +8,8 @@
 #include <string>
 #include <vector>
 
+#include "../Core_old/ParameterList.hpp"
 #include "Core/Event.hpp"
-#include "Core/ParameterList.hpp"
 
 namespace ComPWA {
 class Kinematics;

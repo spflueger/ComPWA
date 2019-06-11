@@ -7,10 +7,10 @@
 #include <numeric>
 
 #include "Core/Event.hpp"
-#include "Core/Particle.hpp"
-#include "Core/Properties.hpp"
-
 #include "Physics/EvtGen/DalitzKinematics.hpp"
+
+#include "../../Core_old/Particle.hpp"
+#include "../../Core_old/Properties.hpp"
 #include "ThirdParty/qft++/include/qft++/Vector4.h"
 
 namespace ComPWA {

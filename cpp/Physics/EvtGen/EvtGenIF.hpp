@@ -2,9 +2,9 @@
 // This file is part of the ComPWA framework, check
 // https://github.com/ComPWA/ComPWA/license.txt for details.
 
+#include "../../Core_old/Logging.hpp"
 #include "Core/Event.hpp"
 #include "Core/Intensity.hpp"
-#include "Core/Logging.hpp"
 #include "Physics/EvtGen/DalitzKinematics.hpp"
 #include "Physics/SubSystem.hpp"
 #include "ThirdParty/EvtGen/EvtDalitzPlot.hh"

@@ -4,15 +4,15 @@
 
 #include "Tools/Plotting/RootPlotData.hpp"
 #include "Core/Intensity.hpp"
-#include "Core/Logging.hpp"
-#include "Core/ProgressBar.hpp"
-#include "Core/Properties.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/ParticleStateTransitionKinematicsInfo.hpp"
 
 #include "TFile.h"
 #include "TParameter.h"
 #include "TTree.h"
+#include "../../Core_old/Logging.hpp"
+#include "../../Core_old/ProgressBar.hpp"
+#include "../../Core_old/Properties.hpp"
 
 namespace ComPWA {
 namespace Tools {

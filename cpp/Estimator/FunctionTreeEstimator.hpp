@@ -7,7 +7,7 @@
 
 #include <memory>
 
-#include "Core/FunctionTree.hpp"
+#include "../Core_old/FunctionTree.hpp"
 #include "Estimator/Estimator.hpp"
 
 namespace ComPWA {

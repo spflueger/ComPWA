@@ -1,13 +1,13 @@
 #include <algorithm>
 
-#include "Core/Exceptions.hpp"
 #include "Core/Generator.hpp"
 #include "Core/Intensity.hpp"
 #include "Core/Kinematics.hpp"
-#include "Core/ProgressBar.hpp"
 #include "Data/DataSet.hpp"
 #include "Tools/Generate.hpp"
 
+#include "../Core_old/Exceptions.hpp"
+#include "../Core_old/ProgressBar.hpp"
 #include "ThirdParty/parallelstl/include/pstl/algorithm"
 #include "ThirdParty/parallelstl/include/pstl/execution"
 

@@ -4,7 +4,7 @@
 
 #include "EvtGenGenerator.hpp"
 
-#include "Core/Properties.hpp"
+#include "../Core_old/Properties.hpp"
 #include "Physics/ParticleStateTransitionKinematicsInfo.hpp"
 
 #include "ThirdParty/EvtGen/EvtGenKine.hh"

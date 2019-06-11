@@ -16,8 +16,8 @@
 
 #include <memory>
 
-#include "Core/Parameter.hpp"
-#include "Core/ParameterList.hpp"
+#include "../../Core_old/Parameter.hpp"
+#include "../../Core_old/ParameterList.hpp"
 #include "Estimator/Estimator.hpp"
 #include "Optimizer/Optimizer.hpp"
 

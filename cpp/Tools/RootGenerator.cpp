@@ -3,8 +3,9 @@
 // https://github.com/ComPWA/ComPWA/license.txt for details.
 
 #include "Tools/RootGenerator.hpp"
+
+#include "../Core_old/Properties.hpp"
 #include "Core/Event.hpp"
-#include "Core/Properties.hpp"
 #include "Physics/ParticleStateTransitionKinematicsInfo.hpp"
 
 namespace ComPWA {

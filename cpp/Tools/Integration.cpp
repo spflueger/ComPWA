@@ -9,10 +9,10 @@
 
 #include "Core/Intensity.hpp"
 #include "Core/Kinematics.hpp"
-#include "Core/Logging.hpp"
 #include "Data/DataSet.hpp"
 #include "Integration.hpp"
 
+#include "../Core_old/Logging.hpp"
 #include "ThirdParty/parallelstl/include/pstl/algorithm"
 #include "ThirdParty/parallelstl/include/pstl/execution"
 

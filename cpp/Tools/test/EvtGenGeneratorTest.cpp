@@ -1,7 +1,8 @@
+
 #define BOOST_TEST_MODULE EvtGenGeneratorTest
 
 #include "Tools/EvtGenGenerator.hpp"
-#include "Core/Logging.hpp"
+#include "../../Core_old/Logging.hpp"
 #include <boost/test/unit_test.hpp>
 #include <chrono>
 

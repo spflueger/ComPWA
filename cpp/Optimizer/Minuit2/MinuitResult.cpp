@@ -9,9 +9,9 @@
 #include <Minuit2/MnUserParameterState.h>
 #include <boost/archive/xml_oarchive.hpp>
 
-#include "Core/Logging.hpp"
-#include "Core/ProgressBar.hpp"
 #include "Optimizer/Minuit2/MinuitResult.hpp"
+#include "../../Core_old/Logging.hpp"
+#include "../../Core_old/ProgressBar.hpp"
 
 using namespace ComPWA::Optimizer::Minuit2;
 

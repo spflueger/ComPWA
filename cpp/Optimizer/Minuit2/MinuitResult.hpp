@@ -20,11 +20,11 @@
 
 #include <Minuit2/FunctionMinimum.h>
 
-#include "Core/FitResult.hpp"
-#include "Core/Logging.hpp"
-#include "Core/ParameterList.hpp"
-#include "Core/Properties.hpp"
-#include "Core/TableFormater.hpp"
+#include "../../Core_old/FitResult.hpp"
+#include "../../Core_old/Logging.hpp"
+#include "../../Core_old/ParameterList.hpp"
+#include "../../Core_old/Properties.hpp"
+#include "../../Core_old/TableFormater.hpp"
 #include "Estimator/Estimator.hpp"
 
 namespace ComPWA {

@@ -13,10 +13,10 @@
 #include <TH2Poly.h>
 #include <TTree.h>
 
-#include "Core/FitParameter.hpp"
+#include "../../Core_old/FitParameter.hpp"
+#include "../../Core_old/ParameterList.hpp"
+#include "../../Core_old/Particle.hpp"
 #include "Core/Intensity.hpp"
-#include "Core/ParameterList.hpp"
-#include "Core/Particle.hpp"
 
 namespace ComPWA {
 struct DataPoint;

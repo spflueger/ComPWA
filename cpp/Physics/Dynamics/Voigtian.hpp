@@ -17,10 +17,10 @@
 #include <memory>
 #include <vector>
 
+#include "../../Core_old/Exceptions.hpp"
+#include "../../Core_old/Functions.hpp"
+#include "../../Core_old/Spin.hpp"
 #include "AbstractDynamicalFunction.hpp"
-#include "Core/Exceptions.hpp"
-#include "Core/Functions.hpp"
-#include "Core/Spin.hpp"
 #include "FormFactor.hpp"
 #include "Physics/HelicityFormalism/AmpWignerD.hpp"
 #include "Utils/Faddeeva.hh"

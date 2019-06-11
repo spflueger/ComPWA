@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 
-#include "Core/FunctionTree.hpp"
+#include "../Core_old/FunctionTree.hpp"
 
 namespace ComPWA {
 

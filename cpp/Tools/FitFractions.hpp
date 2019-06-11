@@ -8,7 +8,6 @@
 #include <memory>
 #include <vector>
 
-#include "Core/ProgressBar.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/Amplitude.hpp"
 #include "Physics/CoherentIntensity.hpp"
@@ -21,6 +20,7 @@
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_sf_gamma.h>
 #include <gsl/gsl_vector.h>
+#include "../Core_old/ProgressBar.hpp"
 
 namespace ComPWA {
 namespace Tools {

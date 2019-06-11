@@ -19,9 +19,9 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 
+#include "../../cpp/Core_old/Logging.hpp"
+#include "../../cpp/Core_old/Properties.hpp"
 #include "Core/Intensity.hpp"
-#include "Core/Logging.hpp"
-#include "Core/Properties.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/CoherentIntensity.hpp"
 #include "Physics/HelicityFormalism/HelicityKinematics.hpp"

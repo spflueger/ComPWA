@@ -5,10 +5,10 @@
 #ifndef COMPWA_EVENT_HPP_
 #define COMPWA_EVENT_HPP_
 
-#include <iostream>
+#include <ostream>
 #include <vector>
 
-#include "Core/Particle.hpp"
+#include "Particle.hpp"
 
 namespace ComPWA {
 

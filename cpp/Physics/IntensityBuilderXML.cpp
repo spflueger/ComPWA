@@ -4,9 +4,6 @@
 
 #include "IntensityBuilderXML.hpp"
 
-#include "Core/Exceptions.hpp"
-#include "Core/Logging.hpp"
-#include "Core/Properties.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/CoefficientAmplitudeDecorator.hpp"
 #include "Physics/CoherentIntensity.hpp"
@@ -27,6 +24,9 @@
 
 #include <boost/property_tree/ptree.hpp>
 
+#include "../Core_old/Exceptions.hpp"
+#include "../Core_old/Logging.hpp"
+#include "../Core_old/Properties.hpp"
 #include "ThirdParty/qft++/include/qft++/WignerD.h"
 
 using ComPWA::Physics::HelicityFormalism::HelicityKinematics;

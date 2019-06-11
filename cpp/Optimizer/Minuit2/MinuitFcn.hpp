@@ -15,9 +15,8 @@
 #include <string>
 #include <vector>
 
-#include "Core/ParameterList.hpp"
-
 #include "Minuit2/FCNBase.h"
+#include "../../Core_old/ParameterList.hpp"
 
 namespace ComPWA {
 namespace Estimator {

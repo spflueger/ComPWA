@@ -9,8 +9,6 @@
 #include "HistTools.hpp"
 
 #include "Core/Event.hpp"
-#include "Core/Logging.hpp"
-#include "Core/ProgressBar.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/HelicityFormalism/HelicityKinematics.hpp"
 
@@ -18,6 +16,8 @@
 #include "TCanvas.h"
 #include "TLegend.h"
 #include "TStyle.h"
+#include "../../Core_old/Logging.hpp"
+#include "../../Core_old/ProgressBar.hpp"
 
 namespace ComPWA {
 namespace Tools {

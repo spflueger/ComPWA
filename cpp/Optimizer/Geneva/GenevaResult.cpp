@@ -3,7 +3,8 @@
 // https://github.com/ComPWA/ComPWA/license.txt for details.
 
 #include "Optimizer/Geneva/GenevaResult.hpp"
-#include "Core/Logging.hpp"
+
+#include "../../Core_old/Logging.hpp"
 
 namespace ComPWA {
 namespace Optimizer {

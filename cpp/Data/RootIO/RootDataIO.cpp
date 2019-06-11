@@ -12,10 +12,10 @@
 #include "TParticlePDG.h"
 #include "TTree.h"
 
+#include "../../Core_old/Logging.hpp"
+#include "../../Core_old/Properties.hpp"
 #include "Core/Generator.hpp"
 #include "Core/Kinematics.hpp"
-#include "Core/Logging.hpp"
-#include "Core/Properties.hpp"
 #include "Data/DataSet.hpp"
 
 namespace ComPWA {

@@ -5,8 +5,8 @@
 #include <cmath>
 #include <limits>
 
-#include "Core/Value.hpp"
 #include "Flatte.hpp"
+#include "../../Core_old/Value.hpp"
 
 namespace ComPWA {
 namespace Physics {

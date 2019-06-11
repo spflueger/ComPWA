@@ -9,10 +9,10 @@
 #include <tuple>
 
 #include "Core/Event.hpp"
-#include "Core/Particle.hpp"
-#include "Core/Properties.hpp"
 #include "Physics/HelicityFormalism/HelicityKinematics.hpp"
 
+#include "../../Core_old/Particle.hpp"
+#include "../../Core_old/Properties.hpp"
 #include "qft++/Vector4.h"
 
 namespace ComPWA {

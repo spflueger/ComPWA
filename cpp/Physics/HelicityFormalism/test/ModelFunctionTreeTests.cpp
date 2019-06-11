@@ -8,9 +8,9 @@
 #include <vector>
 
 #include "Core/Intensity.hpp"
-#include "Core/Logging.hpp"
-#include "Core/ParameterList.hpp"
-#include "Core/Properties.hpp"
+#include "../../../Core_old/Logging.hpp"
+#include "../../../Core_old/ParameterList.hpp"
+#include "../../../Core_old/Properties.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/Amplitude.hpp"
 #include "Physics/Dynamics/RelativisticBreitWigner.hpp"

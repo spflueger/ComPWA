@@ -2,7 +2,7 @@
 // This file is part of the ComPWA framework, check
 // https://github.com/ComPWA/ComPWA/license.txt for details.
 
-#include "Core/Particle.hpp"
+#include "../Core_old/Particle.hpp"
 
 using namespace ComPWA;
 

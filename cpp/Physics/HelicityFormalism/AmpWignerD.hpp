@@ -13,11 +13,11 @@
 #include <memory>
 #include <vector>
 
-#include "Core/FunctionTree.hpp"
-#include "Core/Functions.hpp"
-#include "Core/ParameterList.hpp"
-#include "Core/Properties.hpp"
-#include "Core/Spin.hpp"
+#include "../../Core_old/Functions.hpp"
+#include "../../Core_old/FunctionTree.hpp"
+#include "../../Core_old/ParameterList.hpp"
+#include "../../Core_old/Properties.hpp"
+#include "../../Core_old/Spin.hpp"
 
 namespace ComPWA {
 

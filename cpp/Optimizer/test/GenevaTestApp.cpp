@@ -6,9 +6,9 @@
 
 #include <boost/test/unit_test.hpp>
 
-#include "Core/Logging.hpp"
-#include "Core/Parameter.hpp"
-#include "Core/ParameterList.hpp"
+#include "../../Core_old/Logging.hpp"
+#include "../../Core_old/Parameter.hpp"
+#include "../../Core_old/ParameterList.hpp"
 #include "Estimator/Estimator.hpp"
 #include "Optimizer/Geneva/GenevaIF.hpp"
 

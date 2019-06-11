@@ -8,8 +8,8 @@
 #include <cmath>
 #include <vector>
 
+#include "../../Core_old/Properties.hpp"
 #include "AbstractDynamicalFunction.hpp"
-#include "Core/Properties.hpp"
 #include "Coupling.hpp"
 #include "FormFactor.hpp"
 

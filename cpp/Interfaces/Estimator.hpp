@@ -5,7 +5,7 @@
 #ifndef COMPWA_ESTIMATOR_ESTIMATOR_HPP_
 #define COMPWA_ESTIMATOR_ESTIMATOR_HPP_
 
-#include "Intensity.hpp"
+#include "Function.hpp"
 
 namespace ComPWA {
 namespace Estimator {

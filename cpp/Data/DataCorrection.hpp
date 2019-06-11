@@ -8,9 +8,9 @@
 #include <cfloat>
 #include <stdexcept>
 
+#include "../Core_old/Logging.hpp"
 #include "Data/CorrectionTable.hpp"
 #include "Core/Event.hpp"
-#include "Core/Logging.hpp"
 
 namespace ComPWA {
 namespace Data {

@@ -5,7 +5,7 @@
 #ifndef COMPWA_OPTIMIZER_HPP_
 #define COMPWA_OPTIMIZER_HPP_
 
-#include "Interfaces/Intensity.hpp"
+#include "Function.hpp"
 
 namespace ComPWA {
 
@@ -36,7 +36,8 @@ template <typename T> class Optimizer {
 public:
   virtual ~Optimizer() = default;
 
-  virtual FitResult<T> execute(ParameterList &par) = 0;
+  // TODO: does execute need a parameter list?
+  virtual FitResult<T> execute() = 0;
 };
 
 } // namespace Optimizer

@@ -19,5 +19,14 @@ inline std::vector<std::string> splitString(const std::string &str,
   return result;
 }
 
+/// Check of numbers \p x and \p are equal within \p nEpsion times the numerical
+/// limit.
+inline bool equal(double x, double y, int nEpsilon) {
+  return std::abs(x - y) < std::numeric_limits<double>::epsilon() *
+                               std::abs(x + y) * nEpsilon ||
+         std::abs(x - y) < std::numeric_limits<double>::min();
+}
+
+
 } // namespace Utils
 } // namespace ComPWA

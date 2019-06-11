@@ -5,9 +5,8 @@
 #ifndef COMPWA_TOOLS_PLOTTING_ROOTPLOTDATA_HPP_
 #define COMPWA_TOOLS_PLOTTING_ROOTPLOTDATA_HPP_
 
-#include "Core/FitParameter.hpp"
-
 #include "TFile.h"
+#include "../../Core_old/FitParameter.hpp"
 
 namespace ComPWA {
 class Intensity;

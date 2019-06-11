@@ -20,10 +20,10 @@
 #include "Minuit2/MnStrategy.h"
 #include "Minuit2/MnUserParameters.h"
 
-#include "Core/FitParameter.hpp"
-#include "Core/FitResult.hpp"
-#include "Core/ParameterList.hpp"
 #include "Optimizer/Minuit2/MinuitIF.hpp"
+#include "../../Core_old/FitParameter.hpp"
+#include "../../Core_old/FitResult.hpp"
+#include "../../Core_old/ParameterList.hpp"
 
 using namespace ComPWA::Optimizer::Minuit2;
 

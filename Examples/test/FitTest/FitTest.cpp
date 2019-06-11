@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 
-#include "Core/Properties.hpp"
+#include "../../../cpp/Core_old/Properties.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/HelicityFormalism/HelicityKinematics.hpp"
 #include "Physics/IncoherentIntensity.hpp"

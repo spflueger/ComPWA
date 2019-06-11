@@ -7,7 +7,8 @@
 #include <utility>
 
 #include "AsciiReader.hpp"
-#include "Core/Exceptions.hpp"
+
+#include "../../Core_old/Exceptions.hpp"
 
 namespace ComPWA {
 namespace Data {

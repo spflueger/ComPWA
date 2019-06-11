@@ -12,7 +12,7 @@
 
 #include "Minuit2/MnStrategy.h"
 
-#include "Core/ParameterList.hpp"
+#include "../../Core_old/ParameterList.hpp"
 #include "Optimizer/Minuit2/MinuitFcn.hpp"
 #include "Optimizer/Minuit2/MinuitResult.hpp"
 #include "Optimizer/Optimizer.hpp"

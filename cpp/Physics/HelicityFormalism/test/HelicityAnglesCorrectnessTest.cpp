@@ -8,10 +8,10 @@
 #include <vector>
 
 #include "Core/Intensity.hpp"
-#include "Core/Logging.hpp"
-#include "Core/ParameterList.hpp"
-#include "Core/Particle.hpp"
-#include "Core/Properties.hpp"
+#include "../../../Core_old/Logging.hpp"
+#include "../../../Core_old/ParameterList.hpp"
+#include "../../../Core_old/Particle.hpp"
+#include "../../../Core_old/Properties.hpp"
 #include "Data/DataSet.hpp"
 #include "Physics/HelicityFormalism/HelicityKinematics.hpp"
 #include "Physics/IntensityBuilderXML.hpp"

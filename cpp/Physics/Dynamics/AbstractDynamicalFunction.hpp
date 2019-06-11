@@ -9,9 +9,9 @@
 
 #include <boost/property_tree/ptree.hpp>
 
+#include "../../Core_old/FunctionTree.hpp"
+#include "../../Core_old/ParameterList.hpp"
 #include "Core/Event.hpp"
-#include "Core/FunctionTree.hpp"
-#include "Core/ParameterList.hpp"
 
 namespace ComPWA {
 namespace Physics {

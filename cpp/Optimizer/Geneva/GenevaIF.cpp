@@ -33,11 +33,11 @@
  */
 
 #include "Optimizer/Geneva/GenevaIF.hpp"
-#include "Core/Logging.hpp"
 #include "Optimizer/Geneva/GStartIndividual.hpp"
 #include "Optimizer/Geneva/GenevaResult.hpp"
 
 #include "geneva/Go2.hpp"
+#include "../../Core_old/Logging.hpp"
 
 namespace ComPWA {
 namespace Optimizer {

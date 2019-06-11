@@ -6,8 +6,8 @@
 #include <ostream>
 #include <string>
 
-#include "Core/Logging.hpp"
-#include "Core/TableFormater.hpp"
+#include "../Core_old/Logging.hpp"
+#include "../Core_old/TableFormater.hpp"
 
 namespace ComPWA {
 namespace Data {

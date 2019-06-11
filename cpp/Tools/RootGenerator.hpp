@@ -13,8 +13,8 @@
 #include "TLorentzVector.h"
 #include "TRandom3.h"
 
+#include "../Core_old/Properties.hpp"
 #include "Core/Generator.hpp"
-#include "Core/Properties.hpp"
 
 namespace ComPWA {
 

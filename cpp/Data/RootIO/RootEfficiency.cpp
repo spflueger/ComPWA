@@ -6,8 +6,8 @@
 
 #include "TH2.h"
 
+#include "../../Core_old/Exceptions.hpp"
 #include "Core/Event.hpp"
-#include "Core/Exceptions.hpp"
 
 namespace ComPWA {
 namespace Data {

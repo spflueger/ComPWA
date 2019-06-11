@@ -19,10 +19,9 @@
 #include <boost/numeric/ublas/symmetric.hpp>
 #include <boost/numeric/ublas/io.hpp>
 
-#include "Core/ParameterList.hpp"
-#include "Core/TableFormater.hpp"
-#include "Core/FitResult.hpp"
-
+#include "../../Core_old/FitResult.hpp"
+#include "../../Core_old/ParameterList.hpp"
+#include "../../Core_old/TableFormater.hpp"
 #include "Optimizer/Geneva/GStartIndividual.hpp"
 
 namespace ComPWA {

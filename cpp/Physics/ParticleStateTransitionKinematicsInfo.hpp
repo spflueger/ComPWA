@@ -8,8 +8,8 @@
 #include <string>
 #include <vector>
 
-#include "Core/Particle.hpp"
-#include "Core/Properties.hpp"
+#include "../Core_old/Particle.hpp"
+#include "../Core_old/Properties.hpp"
 
 namespace ComPWA {
 namespace Physics {

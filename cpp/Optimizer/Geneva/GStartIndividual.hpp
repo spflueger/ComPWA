@@ -36,13 +36,13 @@
 #include <string>
 #include <vector>
 
-#include "Core/ParameterList.hpp"
 #include "Estimator/Estimator.hpp"
 
 // Global checks, defines and includes needed for all of Geneva
 #include "common/GGlobalDefines.hpp"
 #include "geneva/GConstrainedDoubleObject.hpp"
 #include "geneva/GParameterSet.hpp"
+#include "../../Core_old/ParameterList.hpp"
 
 namespace Gem {
 namespace Geneva {

@@ -3,12 +3,13 @@
 // https://github.com/ComPWA/ComPWA/license.txt for details.
 
 #include "Estimator/MinLogLH/SumMinLogLH.hpp"
+
+#include "../../Core_old/FitResult.hpp"
+#include "../../Core_old/FunctionTree.hpp"
+#include "../../Core_old/ParameterList.hpp"
+#include "../../Core_old/Particle.hpp"
 #include "Core/Event.hpp"
-#include "Core/FitResult.hpp"
-#include "Core/FunctionTree.hpp"
 #include "Core/Kinematics.hpp"
-#include "Core/ParameterList.hpp"
-#include "Core/Particle.hpp"
 #include "Estimator/MinLogLH/MinLogLH.hpp"
 
 namespace ComPWA {
