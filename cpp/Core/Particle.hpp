@@ -49,36 +49,27 @@ public:
     // TODO: implement this fast
   }
 
-  bool operator==(const FourMomentum &pB) const {
-    return P4 == pB.P4;
-  }
+  bool operator==(const FourMomentum &pB) const { return P4 == pB.P4; }
 
   friend std::ostream &operator<<(std::ostream &stream,
                                   const FourMomentum &p4) {
-    stream << "(" << P4[0] << "," << P4[1] << "," << P4[2] << ","
-           << P4[3] << ")";
+    stream << "(" << p4.P4[0] << "," << p4.P4[1] << "," << p4.P4[2] << ","
+           << p4.P4[3] << ")";
     return stream;
   }
 
-  double invMassSq() const { return invariantMass(*this); }
+  double invMassSq() const { return invariantMassSq(*this); }
 
   double invMass() const { return std::sqrt(invMassSq()); }
 
-  static double invariantMass(const FourMomentum &p4A,
-                              const FourMomentum &p4B) {
-    return invariantMass(p4A + p4B);
-  }
-
-  static double invariantMass(const FourMomentum &p4) {
-    auto vec = p4.value();
-    return ((-1) * (vec.at(0) * vec.at(0) + vec.at(1) * vec.at(1) +
-                    vec.at(2) * vec.at(2) - vec.at(3) * vec.at(3)));
+  static double invariantMassSq(const FourMomentum &p4) {
+    auto vec = p4.P4;
+    return (vec[3] * vec[3]) - threeMomentumSq(p4);
   }
 
   static double threeMomentumSq(const FourMomentum &p4) {
-    auto vec = p4.value();
-    return (vec.at(0) * vec.at(0) + vec.at(1) * vec.at(1) +
-            vec.at(2) * vec.at(2));
+    auto vec = p4.P4;
+    return (vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2]);
   }
 
 private:
@@ -96,8 +87,8 @@ private:
 struct Particle {
 public:
   Particle(double inPx = 0, double inPy = 0, double inPz = 0, double inE = 0,
-           int inpid = 0)
-      : P4(inPx, inPy, inPz, inE), ParticleID(inpid) {}
+           int inpid = 0);
+  Particle(const Particle &in);
   FourMomentum P4;
   int ParticleID;
 };

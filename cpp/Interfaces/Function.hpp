@@ -8,57 +8,85 @@
 #include <complex>
 #include <string>
 
+
 namespace ComPWA {
 
-template <typename T> struct Value {
-  std::string Name;
-  unsigned int UniqueID;
-  T Value;
+struct Dimension
+{
+    size_t Size;
 };
 
-/*enum class ErrorType { NOT_DEFINED, SYMMETRIC, ASYMMETRIC };
-
-template <typename T> struct Parameter : public Value<T> {
-  std::pair<T, T> Errors;
-  std::pair<T, T> Bounds;
-  bool HasBounds = false;
-  bool IsFixed = false;
-  ErrorType ErrType = ErrorType::NOT_DEFINED;
+struct Tensor
+{
+    virtual ~Tensor() = default;
+    std::vector<Dimension> Dimensions;
+    // size: scalar = 0, vector = 1, matrix = 2
 };
 
-using ParameterList = std::vector<Parameter<double>>;*/
+template <typename T>
+struct Scalar : public Tensor
+{
+    Scalar(T value) : Value(value) {}
+    T Value;
+};
 
-// I dont think there has to be a distinction between value and parameter
-// all of the settings, which kind of parameters are fixed, possible bounds etc
-// is given to or set in the specific optimizer class
-// and all of the error estimates are included in the fit result (cov matrix etc)
-using ParameterList = std::vector<Value<double>>;
+template <typename T>
+struct Vector : public Tensor
+{
+    Vector() = default;
+    Vector(std::vector<T> values) : Values(values)
+    {
+        Dimensions.push_back({Values.size()});
+    }
+    std::vector<T> Values;
+};
+
+// matrix
+template <typename T>
+struct Matrix : public Tensor
+{
+    std::vector<std::vector<T>> Values;
+};
+
+template <typename T>
+struct Value
+{
+    std::string Name;
+    T Value;
+};
+
+using ParameterList = std::vector<std::pair<unsigned int, Value<double>>>;
 
 ///
 /// \class Function
 /// Interface that resembles a function of the form
 ///
-/// OutputType function(InputType)
+/// OutputType function(InputTypes)
 ///
 /// The Function also defines a list of parameters, which can be altered
 /// for example by Optimizers.
 ///
-template <typename OutputType, typename InputType> class Function {
+template <typename OutputType, typename... InputTypes>
+class Function
+{
 public:
-  virtual ~Function() = default;
+    virtual ~Function() = default;
 
-  /// evaluate intensity of model at \p point in phase-space
-  virtual OutputType evaluate(const InputType &data) const = 0;
+    // we dont make the evaluate function const anymore, because
+    // it will allow internal modification like caching
+    virtual OutputType operator()(const ParameterList &list, const InputTypes &... args) = 0;
 
-  // changes parameters to the given values in the list
-  virtual void updateParametersFrom(const ParameterList &list) = 0;
+    // changes parameters to the given values in the list
+    // The order of the parameters in the list is important.
+    // It has to be the same as returned by getParameters()
+   // virtual void updateParametersFrom(const ParameterList &) = 0;
 
-  // gets a list of parameters defined by this function
-  virtual ParameterList getParameters() const = 0;
+    // gets a list of parameters defined by this function
+    virtual ParameterList getParameters() const = 0;
 };
-
-using Intensity = Function<double, std::vector<double>>;
-using Amplitude = Function<std::complex<double>, std::vector<double>>;
+using MDouble = std::vector<double>;
+// and intensity is just a function which takes a list of data points and returns a list of intensities
+using Intensity = Function<std::vector<double>, std::vector<MDouble>;
 
 } // namespace ComPWA
 #endif

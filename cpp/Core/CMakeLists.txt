@@ -2,8 +2,13 @@
 # ComPWA Core library #
 #######################
 
-file( GLOB lib_srcs *.cpp )
-file( GLOB lib_headers *.hpp )
+set(srcs 
+	Particle.cpp
+)
+set(headers
+	Particle.hpp
+	Utils.hpp
+)
 
 add_library(Core
   SHARED ${lib_srcs} ${lib_headers}
@@ -23,7 +28,4 @@ install(TARGETS Core
   PUBLIC_HEADER DESTINATION include/Core
 )
 
-
-#add_executable(test
-#)
-
+add_subdirectory(FunctionGraph)

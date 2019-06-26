@@ -18,7 +18,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 # Which target should be build by default?
 set(DEFAULT_BUILD_TYPE "Release")
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -162,7 +162,7 @@ find_package(Geneva QUIET)
 add_subdirectory(ThirdParty)
 
 # Setting ComPWA source dir as include directory
-include_directories(${COMPWA_SOURCE_DIR})
+include_directories(${COMPWA_SOURCE_DIR}/cpp)
 
 #
 # Enable target 'test'
@@ -173,7 +173,7 @@ set(CTEST_OUTPUT_ON_FAILURE TRUE)
 #
 # Submodules
 #
-add_subdirectory(cpp/Interfaces)
+add_subdirectory(cpp/Core)
 #add_subdirectory(Core)
 #add_subdirectory(Tools)
 #add_subdirectory(Data)

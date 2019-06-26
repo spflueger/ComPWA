@@ -15,16 +15,22 @@ namespace Estimator {
 /// of the modeled intensity to the data. Any derived Estimator can be used with
 /// any derived Optimizer.
 ///
-template <typename T> class Estimator : public Function<T, void> {
-
+/// Estimators are functions which are evaluated without data
+template <typename OutputType>
+class Estimator : public Function<OutputType>
+{
 public:
   virtual ~Estimator() = default;
+};
 
-  /// Evaluates the Estimator, which calculates the "distance" of the
-  /// Intensity from the DataPoints (or more generally a model from the data).
-  /// The Optimizer tries to minimize/optimize the returned value of the
-  /// Estimators evaluate function.
-  virtual T evaluate() const = 0;
+// this is what a log likelihood estimator would look like
+class MaxLogLHEstimator : public Estimator<double>
+{
+    double evaluate() final;
+    // changes parameters to the given values in the list
+    void updateParametersFrom(const ParameterList &) final;
+    // gets a list of parameters defined by this function
+    ParameterList getParameters() const final;
 };
 
 } // namespace Estimator

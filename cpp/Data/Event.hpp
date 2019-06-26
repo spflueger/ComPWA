@@ -8,7 +8,7 @@
 #include <ostream>
 #include <vector>
 
-#include "Particle.hpp"
+#include "Core/Particle.hpp"
 
 namespace ComPWA {
 

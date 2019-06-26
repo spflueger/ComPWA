@@ -5,7 +5,11 @@
 #ifndef COMPWA_OPTIMIZER_HPP_
 #define COMPWA_OPTIMIZER_HPP_
 
+#include <string>
+#include <map>
+
 #include "Function.hpp"
+#include "Estimator.hpp"
 
 namespace ComPWA {
 
@@ -21,7 +25,10 @@ template <typename T> struct FitResult {
   T AdditionalProperties;
 };
 
-namespace Optimizer {
+struct OptimizationSettings
+{
+    std::map<std::string, bool> FixedParameters;
+};
 
 ///
 /// \class Optimizer
@@ -32,15 +39,16 @@ namespace Optimizer {
 /// other modules are necessary to work with the new optimizer library or
 /// routine.
 ///
-template <typename T> class Optimizer {
-public:
-  virtual ~Optimizer() = default;
-
-  // TODO: does execute need a parameter list?
-  virtual FitResult<T> execute() = 0;
+template <typename FitResultType, typename EstimatorType>
+class Optimizer
+{
+    // Get the list of parame	ters from the estimator (via getParameters())
+    // Compare with the Settings, and create a mapping of the fitted parameters
+    // to their place in the complete list
+    FitResult<FitResultType> optimize(const Estimator<EstimatorType> &Estimator, OptimizationSettings Settings) = 0;
 };
 
-} // namespace Optimizer
+
 } // namespace ComPWA
 
 #endif
