@@ -1,18 +1,18 @@
 #include "FunctionTreeIntensityWrapper.hpp"
-#include "Core/Intensity.hpp"
+#include "Core/Kinematics.hpp"
 #include "FunctionTree.hpp"
-#include "Kinematics.hpp"
+#include "Intensity.hpp"
 #include "Value.hpp"
 
 namespace ComPWA {
-
+namespace FunctionTree {
 /*FunctionTreeIntensityWrapper::FunctionTreeIntensityWrapper(
     std::shared_ptr<FunctionTree> tree, ParameterList parameters,
     ParameterList data)
     : Tree(tree), Parameters(parameters), Data(data) {}*/
 
 FunctionTreeIntensityWrapper::FunctionTreeIntensityWrapper(
-    std::shared_ptr<ComPWA::OldIntensity> oldintens, size_t VariableCount,
+    std::shared_ptr<OldIntensity> oldintens, size_t VariableCount,
     std::string name) {
   for (size_t i = 0; i < VariableCount; ++i) {
     std::vector<double> temp;
@@ -23,7 +23,7 @@ FunctionTreeIntensityWrapper::FunctionTreeIntensityWrapper(
 }
 
 FunctionTreeIntensityWrapper::FunctionTreeIntensityWrapper(
-    std::shared_ptr<ComPWA::OldIntensity> oldintens,
+    std::shared_ptr<OldIntensity> oldintens,
     std::shared_ptr<ComPWA::Kinematics> kin, std::string name)
     : FunctionTreeIntensityWrapper(
           oldintens, kin->getKinematicVariableNames().size(), name) {}
@@ -71,4 +71,5 @@ std::vector<double> FunctionTreeIntensityWrapper::getParameters() const {
   return params;
 }
 
-} /* namespace ComPWA */
+} // namespace FunctionTree
+} // namespace ComPWA

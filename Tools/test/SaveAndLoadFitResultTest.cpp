@@ -10,10 +10,10 @@
 #include <vector>
 
 #include "Core/FitResult.hpp"
-#include "Core/FunctionTreeIntensityWrapper.hpp"
-#include "Core/Intensity.hpp"
+#include "Core/FunctionTree/FunctionTreeIntensityWrapper.hpp"
+#include "Core/FunctionTree/Intensity.hpp"
+#include "Core/FunctionTree/ParameterList.hpp"
 #include "Core/Logging.hpp"
-#include "Core/ParameterList.hpp"
 #include "Data/DataSet.hpp"
 #include "Estimator/MinLogLH/MinLogLH.hpp"
 #include "Optimizer/Minuit2/MinuitIF.hpp"
@@ -33,6 +33,7 @@
 #include <boost/test/unit_test.hpp>
 
 using namespace ComPWA::Tools;
+using namespace ComPWA::FunctionTree;
 
 BOOST_CLASS_EXPORT(ComPWA::FitResult)
 BOOST_CLASS_EXPORT(ComPWA::Optimizer::Minuit2::MinuitResult)

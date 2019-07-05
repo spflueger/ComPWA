@@ -3,6 +3,7 @@
 #include "Value.hpp"
 
 namespace ComPWA {
+namespace FunctionTree {
 
 FunctionTreeEstimatorWrapper::FunctionTreeEstimatorWrapper(
     std::shared_ptr<FunctionTree> tree, ParameterList parameters)
@@ -32,4 +33,5 @@ std::vector<double> FunctionTreeEstimatorWrapper::getParameters() const {
   return params;
 }
 
-} /* namespace ComPWA */
+} // namespace FunctionTree
+} // namespace ComPWA

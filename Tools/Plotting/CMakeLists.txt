@@ -6,11 +6,11 @@ if(${ROOT_FOUND} AND ${Boost_FOUND})
 
 set(srcs 
   RootPlotData.cpp 
-  DalitzPlot.cpp
+  #DalitzPlot.cpp
 )
 set(headers
   RootPlotData.hpp
-  DalitzPlot.hpp
+  #DalitzPlot.hpp
 )
 
 add_library(Plotting

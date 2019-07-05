@@ -10,9 +10,10 @@
 #ifndef ParameterT_hpp
 #define ParameterT_hpp
 
-#include "Core/FitParameter.hpp"
+#include "FitParameter.hpp"
 #include <iterator>
 namespace ComPWA {
+namespace FunctionTree {
 
 template <class T>
 std::ostream &operator<<(std::ostream &stream, const std::vector<T> &values) {
@@ -29,7 +30,7 @@ std::ostream &operator<<(std::ostream &stream, const std::vector<T> &values) {
   return stream;
 }
 
-template <class T> class Value : public ComPWA::Parameter {
+template <class T> class Value : public Parameter {
 public:
   Value(std::string name = "") : Parameter(name) { Type = typeName<T>(); }
 
@@ -150,5 +151,6 @@ inline std::shared_ptr<Value<std::vector<int>>> MInteger(std::string name,
   return std::make_shared<Value<std::vector<int>>>(name, v);
 }
 
+} // namespace FunctionTree
 } // namespace ComPWA
 #endif

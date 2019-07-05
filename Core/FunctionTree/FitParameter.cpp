@@ -4,9 +4,10 @@
 
 #include <iomanip>
 
-#include "Core/FitParameter.hpp"
+#include "FitParameter.hpp"
 
-using namespace ComPWA;
+namespace ComPWA {
+namespace FunctionTree {
 
 FitParameter::FitParameter(std::string inName)
     : Parameter(inName, ParType::DOUBLE), HasBounds(false), IsFixed(true),
@@ -299,3 +300,6 @@ boost::property_tree::ptree FitParameter::save() const {
   }
   return pt;
 }
+
+} // namespace FunctionTree
+} // namespace ComPWA

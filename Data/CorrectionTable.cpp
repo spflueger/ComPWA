@@ -7,11 +7,11 @@
 #include <string>
 
 #include "Core/Logging.hpp"
-#include "Core/TableFormater.hpp"
 
 namespace ComPWA {
 namespace Data {
 
+/*
 void CorrectionTable::Print() const {
   if (sys.size() == 0 && antiSys.size() == 0)
     return; // don't print if empty
@@ -41,7 +41,8 @@ void CorrectionTable::Print() const {
   }
   table.footer();
   LOG(INFO) << "CorrectionTable::Print() | " << title << std::endl << out.str();
-}
+}*/
+
 void CorrectionTable::SetSystematics(std::vector<double> b,
                                      std::vector<double> bError) {
   sys = b;

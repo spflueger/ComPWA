@@ -15,7 +15,6 @@
 #include <string>
 #include <vector>
 
-#include "Core/ParameterList.hpp"
 #include "Estimator/Estimator.hpp"
 
 #include "Minuit2/FCNBase.h"
@@ -31,9 +30,8 @@ namespace Minuit2 {
 class MinuitFcn : public FCNBase {
 
 public:
-  MinuitFcn(std::shared_ptr<ComPWA::Estimator::Estimator<double>> estimator,
-            ComPWA::ParameterList &parameters);
-  virtual ~MinuitFcn();
+  MinuitFcn(ComPWA::Estimator::Estimator<double> &estimator);
+  virtual ~MinuitFcn() = default;
 
   double operator()(const std::vector<double> &x) const;
 
@@ -56,10 +54,7 @@ public:
   };
 
 private:
-  std::shared_ptr<ComPWA::Estimator::Estimator<double>> Estimator;
-
-  /// List of Parameters that influence the Estimator
-  ComPWA::ParameterList &Parameters;
+  ComPWA::Estimator::Estimator<double> &Estimator;
 
   /// mapping of minuit ids to ComPWA names
   std::map<unsigned int, std::string> IDToParameterNameMapping;

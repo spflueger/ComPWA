@@ -12,7 +12,7 @@
 
 #include "Minuit2/MnStrategy.h"
 
-#include "Core/ParameterList.hpp"
+#include "Core/FitParameter.hpp"
 #include "Optimizer/Minuit2/MinuitFcn.hpp"
 #include "Optimizer/Minuit2/MinuitResult.hpp"
 #include "Optimizer/Optimizer.hpp"
@@ -21,6 +21,11 @@ namespace ComPWA {
 namespace Optimizer {
 namespace Minuit2 {
 
+struct OptimizationSettings {
+  bool UseMinos = false;
+  bool UseHesse = true;
+};
+
 ///
 /// \class MinuitIF
 /// Wrapper of the Minuit2 Optimizer library. This class provides a wrapper
@@ -28,32 +33,18 @@ namespace Minuit2 {
 /// Optimizer interface to be easily adapted to other modules. The data needs to
 /// be provided with the ControlParameter interface.
 ///
-class MinuitIF : public Optimizer {
-
+class MinuitIF : public Optimizer<MinuitResult> {
 public:
-  MinuitIF(std::shared_ptr<ComPWA::Estimator::Estimator<double>> esti,
-           ParameterList &par);
+  MinuitIF(OptimizationSettings Settings_ = OptimizationSettings());
 
-  virtual std::shared_ptr<FitResult> exec(ParameterList &par);
+  MinuitResult optimize(ComPWA::Estimator::Estimator<double> &Estimator,
+                        ComPWA::FitParameterList InitialParameters);
 
-  virtual ~MinuitIF();
+private:
+  MinuitResult createResult(ROOT::Minuit2::FunctionMinimum min,
+                            FitParameterList InitialParameters);
 
-  virtual void setUseHesse(bool onoff) { UseHesse = onoff; }
-
-  virtual bool useHesse() { return UseHesse; }
-
-  virtual void setUseMinos(bool onoff) { UseMinos = onoff; }
-
-  virtual bool useMinos() { return UseMinos; }
-
-protected:
-  ROOT::Minuit2::MinuitFcn Function;
-
-  std::shared_ptr<ComPWA::Estimator::Estimator<double>> Estimator;
-
-  bool UseHesse;
-
-  bool UseMinos;
+  OptimizationSettings Settings;
 };
 
 class MinuitStrategy : public ROOT::Minuit2::MnStrategy {

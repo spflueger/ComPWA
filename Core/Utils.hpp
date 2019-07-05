@@ -1,9 +1,18 @@
 #include <iostream>
+#include <limits>
 #include <sstream>
 #include <vector>
 
 namespace ComPWA {
 namespace Utils {
+
+/// Check of numbers \p x and \p are equal within \p nEpsion times the numerical
+/// limit.
+inline bool equal(double x, double y, int nEpsilon) {
+  return std::abs(x - y) < std::numeric_limits<double>::epsilon() *
+                               std::abs(x + y) * nEpsilon ||
+         std::abs(x - y) < std::numeric_limits<double>::min();
+}
 
 /// split the string into pieces, which are separated by the separator
 /// character (default separator: space)

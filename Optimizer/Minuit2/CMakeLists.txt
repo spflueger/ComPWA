@@ -5,7 +5,7 @@
 if( TARGET ROOT::Minuit2 )
 
 set(lib_srcs
-	MinuitFcn.cpp MinuitIF.cpp MinuitResult.cpp
+	MinuitFcn.cpp MinuitIF.cpp
 )
 set(lib_headers
 	MinuitFcn.hpp MinuitIF.hpp MinuitResult.hpp

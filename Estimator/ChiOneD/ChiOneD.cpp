@@ -4,16 +4,16 @@
 
 #include "ChiOneD.hpp"
 
-#include "Core/Intensity.hpp"
+#include "Core/Function.hpp"
 
 namespace ComPWA {
 
 namespace Estimator {
 namespace ChiOneD {
 
-ChiOneD::ChiOneD(std::shared_ptr<ComPWA::Intensity> intensity,
-                 const std::vector<DataPoint> &points)
-    : Intensity(intensity), DataPoints(points) {}
+ChiOneD::ChiOneD(std::shared_ptr<ComPWA::Intensity> Intensity_,
+                 const Data::DataSet &DataSample_)
+    : Intensity(Intensity_), DataSample(DataSample_) {}
 
 double ChiOneD::evaluate() const {
   throw std::runtime_error("ChiOneD::evaluate: currently not implemented!");

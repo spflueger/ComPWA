@@ -5,14 +5,16 @@
 #include "Estimator/MinLogLH/SumMinLogLH.hpp"
 #include "Core/Event.hpp"
 #include "Core/FitResult.hpp"
-#include "Core/FunctionTree.hpp"
+#include "Core/FunctionTree/FunctionTree.hpp"
+#include "Core/FunctionTree/ParameterList.hpp"
 #include "Core/Kinematics.hpp"
-#include "Core/ParameterList.hpp"
 #include "Core/Particle.hpp"
 #include "Estimator/MinLogLH/MinLogLH.hpp"
 
 namespace ComPWA {
 namespace Estimator {
+
+using namespace ComPWA::FunctionTree;
 
 SumMinLogLH::SumMinLogLH(std::vector<std::shared_ptr<MinLogLH>> LogLikelihoods_)
     : LogLikelihoods(LogLikelihoods_) {}
@@ -24,9 +26,11 @@ double SumMinLogLH::evaluate() {
   return lh;
 }
 
-std::shared_ptr<FunctionTree> createSumMinLogLHEstimatorFunctionTree(
-    std::vector<std::shared_ptr<FunctionTree>> LogLikelihoods) {
-  auto EvaluationTree = std::make_shared<FunctionTree>(
+std::shared_ptr<ComPWA::FunctionTree::FunctionTree>
+createSumMinLogLHEstimatorFunctionTree(
+    std::vector<std::shared_ptr<ComPWA::FunctionTree::FunctionTree>>
+        LogLikelihoods) {
+  auto EvaluationTree = std::make_shared<ComPWA::FunctionTree::FunctionTree>(
       "SumLogLh", std::make_shared<Value<double>>(),
       std::make_shared<AddAll>(ParType::DOUBLE));
   unsigned int counter(1);

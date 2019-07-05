@@ -2,12 +2,14 @@
 // This file is part of the ComPWA framework, check
 // https://github.com/ComPWA/ComPWA/license.txt for details.
 
-#include "Core/Functions.hpp"
 #include <cmath>
 #include <functional>
 #include <numeric>
 
+#include "Functions.hpp"
+
 namespace ComPWA {
+namespace FunctionTree {
 
 void Inverse::execute(ParameterList &paras, std::shared_ptr<Parameter> &out) {
   if (out && checkType != out->type())
@@ -987,4 +989,5 @@ void AbsSquare::execute(ParameterList &paras, std::shared_ptr<Parameter> &out) {
   } // end switch
 };
 
+} // namespace FunctionTree
 } // namespace ComPWA

@@ -15,7 +15,6 @@
 
 #include "Core/FitParameter.hpp"
 #include "Core/Function.hpp"
-#include "Core/ParameterList.hpp"
 #include "Core/Particle.hpp"
 
 namespace ComPWA {

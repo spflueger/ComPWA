@@ -3,10 +3,11 @@
 
 #include <memory>
 
-#include "Core/ParameterList.hpp"
 #include "Estimator/Estimator.hpp"
+#include "ParameterList.hpp"
 
 namespace ComPWA {
+namespace FunctionTree {
 
 class FunctionTree;
 
@@ -24,6 +25,7 @@ private:
   ParameterList Parameters;
 };
 
+} // namespace FunctionTree
 } /* namespace ComPWA */
 
 #endif

@@ -113,7 +113,7 @@ public:
   /// calculated.
   double GetTotalSystematicsError(bool useArithmeticMean = 0);
 
-  void Print() const;
+  //void Print() const;
 
   std::string GetTitle() { return title; }
 
