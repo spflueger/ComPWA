@@ -53,7 +53,6 @@ jobs:
       dist: xenial
       env:
         - TASK="Build documentation"
-        - DOXYFILE="$BASEPATH/doc/Doxyfile.travisCI"
       addons:
         apt:
           packages:
@@ -64,13 +63,25 @@ jobs:
             - graphviz
       install: true
       script:
-        # Generate and deploy documentation
         - cd $BASEPATH
-        - echo $DOXYFILE
-        - chmod +x $BASEPATH/doc/generateDoxygen.sh
-        # Documentation is generated and deployed to gh-pages
-        # (only if this is not a pull request).
-        - $BASEPATH/doc/generateDoxygen.sh
+        - doxygen $BASEPATH/doc/Doxyfile
+      before_deploy:
+        - cd $BASEPATH
+        - touch doc/html/.nojekyll
+        - openssl aes-256-cbc -K $encrypted_ffa3dff63372_key -iv $encrypted_ffa3dff63372_iv -in github_deploy_key.enc -out github_deploy_key -d
+      deploy:
+        provider: pages
+        keep_history: true
+        deploy_key: github_deploy_key
+        cleanup: false
+        edge: true
+        repo: ComPWA/ComPWA.git
+        target_branch: gh-pages
+        local_dir: "$BASEPATH/doc/html"
+        verbose: true
+        on:
+          branch: master
+
 
     - os: osx # test XCode build
       osx_image: xcode10.2
