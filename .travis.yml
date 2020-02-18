@@ -24,7 +24,7 @@ addons:
   apt:
     update: True
     sources:
-      - ubuntu-toolchain-r-test # gcc upto  8.0
+      - ubuntu-toolchain-r-test # gcc up to 8.0
       - llvm-toolchain-xenial-8
     packages:
       - gcc-7
@@ -107,7 +107,6 @@ jobs:
         homebrew:
           packages:
             - boost
-            - gsl
       script:
         - mkdir $BASEPATH/build
         - cd $BASEPATH/build
@@ -135,6 +134,7 @@ jobs:
       addons:
         apt:
           packages:
+            - libboost-all-dev # Version 1.58 for xenial
             - lcov
       script:
         - mkdir $BASEPATH/build
@@ -172,7 +172,7 @@ jobs:
       script:
         - mkdir $BASEPATH/build
         - cd $BASEPATH/build
-        - cmake -DCMAKE_BUILD_TYPE=Debug $BASEPATH;
+        - cmake -DCMAKE_BUILD_TYPE=Debug $BASEPATH
         - cmake --build . -- -j 2
 
 script:
