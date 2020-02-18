@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['uniformtwobodygenerator',['UniformTwoBodyGenerator',['../d6/d28/classComPWA_1_1Tools_1_1UniformTwoBodyGenerator.html',1,'ComPWA::Tools']]],
-  ['unitamp',['UnitAmp',['../d0/d97/classComPWA_1_1UnitAmp.html',1,'ComPWA']]],
-  ['unitcorrection',['UnitCorrection',['../da/dcc/classComPWA_1_1UnitCorrection.html',1,'ComPWA']]],
-  ['unitefficiency',['UnitEfficiency',['../df/dce/classComPWA_1_1UnitEfficiency.html',1,'ComPWA']]]
+  ['value',['Value',['../classComPWA_1_1FunctionTree_1_1Value.html',1,'ComPWA::FunctionTree']]],
+  ['voigtianstrategy',['VoigtianStrategy',['../classComPWA_1_1Physics_1_1Dynamics_1_1VoigtianStrategy.html',1,'ComPWA::Physics::Dynamics']]]
 ];

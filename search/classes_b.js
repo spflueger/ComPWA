@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['levicivitatensor',['LeviCivitaTensor',['../d9/d3a/classComPWA_1_1Physics_1_1QFT_1_1LeviCivitaTensor.html',1,'ComPWA::Physics::QFT']]],
-  ['linestyle',['LineStyle',['../dc/df6/structNeatPlotting_1_1LineStyle.html',1,'NeatPlotting']]],
-  ['logging',['Logging',['../d8/d8a/classComPWA_1_1Logging.html',1,'ComPWA']]],
-  ['logof',['LogOf',['../df/d91/classComPWA_1_1LogOf.html',1,'ComPWA']]]
+  ['minloglh',['MinLogLH',['../classComPWA_1_1Estimator_1_1MinLogLH.html',1,'ComPWA::Estimator']]],
+  ['minuitif',['MinuitIF',['../classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitIF.html',1,'ComPWA::Optimizer::Minuit2']]],
+  ['minuitresult',['MinuitResult',['../structComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html',1,'ComPWA::Optimizer::Minuit2']]],
+  ['momentumcorrection',['MomentumCorrection',['../classComPWA_1_1Data_1_1MomentumCorrection.html',1,'ComPWA::Data']]],
+  ['multall',['MultAll',['../classComPWA_1_1FunctionTree_1_1MultAll.html',1,'ComPWA::FunctionTree']]]
 ];

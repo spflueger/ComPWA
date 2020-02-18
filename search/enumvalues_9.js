@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sym',['SYM',['../db/dce/Parameter_8hpp.html#ab0df38968e4f03a3f1f6d6df0f31f45aa47d6024ff3295a2440dbcc63a7e967e6',1,'Parameter.hpp']]]
+  ['particle_5fswarm',['PARTICLE_SWARM',['../namespaceComPWA_1_1Optimizer_1_1Geneva.html#a95c49eeff7bf2a0a6bc4e84c83d5b627a7f1a205245f67ce729c81494b447c56e',1,'ComPWA::Optimizer::Geneva']]]
 ];

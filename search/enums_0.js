@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['errortype',['ErrorType',['../db/dce/Parameter_8hpp.html#ab0df38968e4f03a3f1f6d6df0f31f45a',1,'Parameter.hpp']]],
-  ['etestcommandidentifiers',['ETestCommandIdentifiers',['../d3/d54/AmpPlotterApp_8cpp.html#a4bf0befc80b84d1dbeffc79936968828',1,'AmpPlotterApp.cpp']]]
+  ['algorithmtypes',['AlgorithmTypes',['../namespaceComPWA_1_1Optimizer_1_1Geneva.html#a95c49eeff7bf2a0a6bc4e84c83d5b627',1,'ComPWA::Optimizer::Geneva']]]
 ];

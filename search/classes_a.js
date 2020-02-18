@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['kahansummation',['KahanSummation',['../dd/d6d/structComPWA_1_1KahanSummation.html',1,'ComPWA']]],
-  ['kinematics',['Kinematics',['../db/d37/classComPWA_1_1Kinematics.html',1,'ComPWA']]]
+  ['logging',['Logging',['../classComPWA_1_1Logging.html',1,'ComPWA']]],
+  ['logof',['LogOf',['../classComPWA_1_1FunctionTree_1_1LogOf.html',1,'ComPWA::FunctionTree']]]
 ];

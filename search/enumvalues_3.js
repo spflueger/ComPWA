@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['double',['DOUBLE',['../da/da9/namespaceComPWA.html#a8757ca75d53e7336effe8394455287b0ab5c2cccf7df479bd683e1b7189938104',1,'ComPWA']]]
+  ['evolutionary',['EVOLUTIONARY',['../namespaceComPWA_1_1Optimizer_1_1Geneva.html#a95c49eeff7bf2a0a6bc4e84c83d5b627af8729aa21799099e99382d774477e38b',1,'ComPWA::Optimizer::Geneva']]]
 ];

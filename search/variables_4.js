@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['dalitzplot_5f',['dalitzPlot_',['../d2/d94/classComPWA_1_1Estimator_1_1SliceFit_1_1SliceFit.html#add15729e65327a4791e8d1549cf63ee6',1,'ComPWA::Estimator::SliceFit::SliceFit']]],
-  ['data_5fobject',['data_object',['../d6/d25/classNeatPlotting_1_1DrawableDataObjectDrawOptionPair.html#a22faadd9b02c461a96c2543028ba8106',1,'NeatPlotting::DrawableDataObjectDrawOptionPair']]],
-  ['datadiagrams',['dataDiagrams',['../da/d41/classplotData.html#a4b91319668d9e1be3883c168593d58e0',1,'plotData::dataDiagrams()'],['../da/dca/classDalitzPlot.html#a8b7eb2a7875812cf56559c4c5bf8d3db',1,'DalitzPlot::dataDiagrams()']]],
-  ['datalist',['dataList',['../d3/d66/classComPWA_1_1DataReader_1_1Data.html#ac7620ae7f12eca2bde8c55881145076a',1,'ComPWA::DataReader::Data']]],
-  ['defaultparticlelist',['defaultParticleList',['../de/d6a/ParticleList_8hpp.html#ae7cc6616eae35e248453557134093c69',1,'ParticleList.hpp']]],
-  ['dependency_5fvalues_5ferror_5fmap',['dependency_values_error_map',['../d6/d31/classNeatPlotting_1_1SystematicsAnalyser.html#a9cc0550c262353f0b6484cd3cfcd4c7c',1,'NeatPlotting::SystematicsAnalyser']]],
-  ['dependency_5fvalues_5fmap',['dependency_values_map',['../d6/d31/classNeatPlotting_1_1SystematicsAnalyser.html#a208cdad0b243a6b9bce649e144c4777d',1,'NeatPlotting::SystematicsAnalyser']]],
-  ['diff_5fcolors',['diff_colors',['../d7/dfa/namespaceNeatPlotting.html#a4e8e236394cddb0ebef1377f1d3dd25c',1,'NeatPlotting']]],
-  ['draw_5flabels',['draw_labels',['../dd/d75/structNeatPlotting_1_1PlotAccessories.html#ac08c7b7becda6602562769613a7717e9',1,'NeatPlotting::PlotAccessories']]],
-  ['draw_5foption',['draw_option',['../d6/d25/classNeatPlotting_1_1DrawableDataObjectDrawOptionPair.html#a07d7cb603983eb18a6bf528e598e86e2',1,'NeatPlotting::DrawableDataObjectDrawOptionPair::draw_option()'],['../d4/d1e/structNeatPlotting_1_1DataObjectStyle.html#afbcd625d983eedb57e679ff0e4da3a21',1,'NeatPlotting::DataObjectStyle::draw_option()']]],
-  ['dummy',['dummy',['../d8/dae/classComPWA_1_1Physics_1_1QFT_1_1Conversion_1_1__big.html#a30e16d27bb17a3438669233504aebc7a',1,'ComPWA::Physics::QFT::Conversion::_big']]]
+  ['dalitzplot',['DalitzPlot',['../classComPWA_1_1Physics_1_1EvtGen_1_1EvtGenIF.html#ad8e3a822234a0adb93641f0d5e64fdeb',1,'ComPWA::Physics::EvtGen::EvtGenIF']]],
+  ['data',['Data',['../classComPWA_1_1FunctionTree_1_1FunctionTreeIntensity.html#aa0b04a89a4943a72dffc7c8eb7b4331d',1,'ComPWA::FunctionTree::FunctionTreeIntensity::Data()'],['../structComPWA_1_1Data_1_1DataSet.html#a137f0d1b3cdf6a82a02c6d29c0aaf812',1,'ComPWA::Data::DataSet::Data()'],['../structComPWA_1_1Physics_1_1IntensityBuilderXML_1_1DataContainer.html#a07558b8e6241e2f5bf5fcc0652005a40',1,'ComPWA::Physics::IntensityBuilderXML::DataContainer::Data()'],['../classComPWA_1_1Physics_1_1IntensityBuilderXML.html#a1d9112d7de0dcea23a74d167935b3f4a',1,'ComPWA::Physics::IntensityBuilderXML::Data()']]],
+  ['datasample',['DataSample',['../classComPWA_1_1Estimator_1_1ChiOneD_1_1ChiOneD.html#aa80c6482a43afe0947a518ec6eaae2f8',1,'ComPWA::Estimator::ChiOneD::ChiOneD::DataSample()'],['../classComPWA_1_1Estimator_1_1MinLogLH.html#a3361b92f98afa14798431ea8253d156e',1,'ComPWA::Estimator::MinLogLH::DataSample()'],['../structenergyPar.html#a6cb00d0e2633deb121b5a32ffff8f666',1,'energyPar::DataSample()']]],
+  ['daughtermasses',['DaughterMasses',['../structComPWA_1_1Physics_1_1Dynamics_1_1InputInfo.html#a08400d29530aadaaceb33013958957f2',1,'ComPWA::Physics::Dynamics::InputInfo']]],
+  ['decayinfo',['DecayInfo',['../classComPWA_1_1ParticleProperties.html#a29e6dc20a0d37bbe68f854c535389602',1,'ComPWA::ParticleProperties']]],
+  ['doublevalues',['DoubleValues',['../classComPWA_1_1FunctionTree_1_1ParameterList.html#a62b0bb5c4ece5b9f5e6241c07f14dca3',1,'ComPWA::FunctionTree::ParameterList']]]
 ];

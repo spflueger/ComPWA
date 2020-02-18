@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['bins',['bins',['../dc/d06/classCorrectionTable.html#af2775f8c81b642dda4b359cc18bcbd43',1,'CorrectionTable']]],
-  ['booky_5fdata',['booky_data',['../de/d7e/classNeatPlotting_1_1Booky.html#a426b7bae2915f1f79654b3649090348c',1,'NeatPlotting::Booky']]],
-  ['bounds_5f',['bounds_',['../da/dd8/classComPWA_1_1ComplexParameter.html#ab191135974978de90a233d164400d9d2',1,'ComPWA::ComplexParameter::bounds_()'],['../d1/d81/classComPWA_1_1DoubleParameter.html#a133a8ecca80793231120b561ccc33923',1,'ComPWA::DoubleParameter::bounds_()'],['../d2/d19/classComPWA_1_1IntegerParameter.html#a0aad55b9c9ee167a7489ce969d971787',1,'ComPWA::IntegerParameter::bounds_()']]],
-  ['br',['Br',['../d2/d94/classComPWA_1_1Estimator_1_1SliceFit_1_1SliceFit.html#acd8c4d70cfbc20ca80581c33f13c9d8a',1,'ComPWA::Estimator::SliceFit::SliceFit::Br()'],['../de/d7c/classComPWA_1_1Estimator_1_1SliceFitUB_1_1SliceFitUB.html#a846053dbec43dae7b3f035c8082f9684',1,'ComPWA::Estimator::SliceFitUB::SliceFitUB::Br()'],['../d6/d9a/SliceFitApp_8cpp.html#a0a0f79bc350021411798f6ac6cfacbc7',1,'Br():&#160;SliceFitApp.cpp'],['../d3/dbc/SliceFitRANDApp_8cpp.html#a0a0f79bc350021411798f6ac6cfacbc7',1,'Br():&#160;SliceFitRANDApp.cpp'],['../d9/de4/SliceFitUBApp_8cpp.html#a0a0f79bc350021411798f6ac6cfacbc7',1,'Br():&#160;SliceFitUBApp.cpp'],['../d1/d1a/executables_2DalitzFitApp_8cpp.html#a0a0f79bc350021411798f6ac6cfacbc7',1,'Br():&#160;DalitzFitApp.cpp'],['../d1/d13/HelicityAmplitudeFitApp_8cpp.html#a0a0f79bc350021411798f6ac6cfacbc7',1,'Br():&#160;HelicityAmplitudeFitApp.cpp']]]
+  ['bins',['Bins',['../classComPWA_1_1Data_1_1CorrectionTable.html#a96fa603133a528f6dbd14e0a41b4fc40',1,'ComPWA::Data::CorrectionTable']]],
+  ['binsize',['BinSize',['../classComPWA_1_1Physics_1_1IntegrationSample.html#a8ffd36be5ae6c3227132571bc160ab96',1,'ComPWA::Physics::IntegrationSample']]],
+  ['bounds',['Bounds',['../structComPWA_1_1FitParameter.html#ab614e7c0e5a89c2f56048444138f6166',1,'ComPWA::FitParameter::Bounds()'],['../classComPWA_1_1FunctionTree_1_1FitParameter.html#a79c04590cda8cf54213470accc84e8b3',1,'ComPWA::FunctionTree::FitParameter::Bounds()']]],
+  ['brancheff',['BranchEff',['../classComPWA_1_1Tools_1_1Plotting_1_1DalitzHisto.html#ad0b5f737603184ac86eafd3486717df6',1,'ComPWA::Tools::Plotting::DalitzHisto']]],
+  ['branchpoint',['BranchPoint',['../classComPWA_1_1Tools_1_1Plotting_1_1DalitzHisto.html#a09169563d4f971214784e09c20cd039a',1,'ComPWA::Tools::Plotting::DalitzHisto']]],
+  ['branchweight',['BranchWeight',['../classComPWA_1_1Tools_1_1Plotting_1_1DalitzHisto.html#a98ec9ba4656ed9f06a59a8a9e8dd1aa2',1,'ComPWA::Tools::Plotting::DalitzHisto']]],
+  ['bwfunction',['BWFunction',['../classComPWA_1_1Physics_1_1Dynamics_1_1BreitWignerStrategy.html#abb329c9c8caee3e5fcd24071ae566c02',1,'ComPWA::Physics::Dynamics::BreitWignerStrategy']]]
 ];

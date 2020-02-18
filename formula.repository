@@ -1,0 +1,29 @@
+\form#0:$\pi^+$
+\form#1:$\pi^-$
+\form#2:$\gamma$
+\form#3:$\chi^{2}$
+\form#4:\[ -log \mathcal{L} = N_{\mathrm{obs}} * \log(\lambda) - \sum_i^{N_{\mathrm{obs}}} \log(I(x_i)) \]
+\form#5:$I(x_i)$
+\form#6:$x_i$
+\form#7:$ \lambda = \frac{V}{\sum w_i}\sum_i^{N_{\mathrm{phsp}}} I(x_i)\cdot \epsilon_i \cdot w_i $
+\form#8:$ \epsilon $
+\form#9:$ w $
+\form#10:$ V $
+\form#11:$ e^+e^- \to pi^+ pi^- J/psi $
+\form#12:\[ \mathcal{A}_R(s) = \frac{g_p*g}{s - M_R^2 + i \sqrt{s} \Gamma_R B^2} \]
+\form#13:$ g_p, g$
+\form#14:$ B^2$
+\form#15:\[ B^2 = \left( \frac{q(\sqrt{s})}{q(M_R)} \right)^{2L+1} \times \left( \frac{M_R}{\sqrt{s}} \right) \times \left( \frac{F(\sqrt{s})}{F(\sqrt{s_R})} \right)^{2} \]
+\form#16:\[ B^2 = \left( \frac{q(\sqrt{s})}{q(M_R)} \right) \times \left( \frac{M_R}{\sqrt{s}} \right) \times \left( \frac{B_L(\sqrt{s})}{B_L(\sqrt{s_R})} \right)^{2} \]
+\form#17:\[ \mathrm{Voig}(x; \sigma, \gamma) = \int Gaus(x';\sigma)BW(x - x';gamma) dx' = Re[w(z)]/(\sigma\sqrt{2\pi}) and z = (x + i\gamma)/(\sigma\sqrt{s}) \]
+\form#18:$m^2$
+\form#19:$\Theta$
+\form#20:$\phi$
+\form#21:$(\Theta, \phi)$
+\form#22:$m_i\rightarrow 0$
+\form#23:$s$
+\form#24:\[ f´(x) = \frac{f(x+h) - f(x-h)}{2h} + O(h^2) \]
+\form#25:\[ \langle f \rangle =\frac{1}{N} \sum_{i=1}^N f(\overline{\mathbf{x}}_i) \]
+\form#26:\[ I \approx Q_N = V*\langle f \rangle. \]
+\form#27:\[ \mathrm{Var}(Q_N) = \frac{V^2}{N} \frac{1}{(N-1)} \sum_{i=1}^N \left (f(\overline{\mathbf{x}}_i) - \langle f \rangle \right )^2 \]
+\form#28:$ \sqrt{\mathrm{Var}(Q_N)} $

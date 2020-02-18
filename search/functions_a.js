@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['kahansum',['KahanSum',['../da/da9/namespaceComPWA.html#a0384fd53343d0aef9a26109412c94994',1,'ComPWA']]],
-  ['kgv',['kgV',['../d4/d1a/classComPWA_1_1Spin.html#a04db6805d49e681629fd29cb551578d1',1,'ComPWA::Spin']]],
-  ['kinematics',['Kinematics',['../db/d37/classComPWA_1_1Kinematics.html#a32199d5718da274864f859ea2ba0cbff',1,'ComPWA::Kinematics::Kinematics(std::vector&lt; pid &gt; initial=std::vector&lt; pid &gt;(), std::vector&lt; pid &gt; finalS=std::vector&lt; pid &gt;())'],['../db/d37/classComPWA_1_1Kinematics.html#a524119b6881d7df9ad031cf51b0f621d',1,'ComPWA::Kinematics::Kinematics(const Kinematics &amp;that)=delete']]]
+  ['load',['load',['../classComPWA_1_1FunctionTree_1_1FitParameter.html#aebdd34e958201f61fbfb2c388111e38f',1,'ComPWA::FunctionTree::FitParameter::load()'],['../classComPWA_1_1Physics_1_1SubSystem.html#ae50e60edce4f2aba6a8b58cc6480dd34',1,'ComPWA::Physics::SubSystem::load()']]],
+  ['logging',['Logging',['../classComPWA_1_1Logging.html#a4d2d23a87a0b4ff3c316ee8dccf8355b',1,'ComPWA::Logging']]],
+  ['logof',['LogOf',['../classComPWA_1_1FunctionTree_1_1LogOf.html#a326ca2ebf1b06e46a03c9e623421ff7c',1,'ComPWA::FunctionTree::LogOf']]]
 ];

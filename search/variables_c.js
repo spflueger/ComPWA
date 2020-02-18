@@ -1,15 +1,18 @@
 var searchData=
 [
-  ['label',['label',['../de/dc5/classNeatPlotting_1_1PlotLabel.html#ae347ff80e023f5760819e55eb21c0e5d',1,'NeatPlotting::PlotLabel']]],
-  ['label_5ftext_5fleftpos',['label_text_leftpos',['../dd/d75/structNeatPlotting_1_1PlotAccessories.html#a7d775d7aeabc8ff35c2ade56096c102e',1,'NeatPlotting::PlotAccessories']]],
-  ['label_5ftext_5fspacing',['label_text_spacing',['../dd/d75/structNeatPlotting_1_1PlotAccessories.html#aa6d81383180502ee1de799ec5147871f',1,'NeatPlotting::PlotAccessories']]],
-  ['label_5ftext_5ftoppos',['label_text_toppos',['../dd/d75/structNeatPlotting_1_1PlotAccessories.html#ac170716aa86d923c1e5f018fd23c5480',1,'NeatPlotting::PlotAccessories']]],
-  ['labels',['labels',['../dd/d75/structNeatPlotting_1_1PlotAccessories.html#a49a72fc69af161d6900f44e8dab3a4b7',1,'NeatPlotting::PlotAccessories']]],
-  ['lastsep',['lastSep',['../d8/d6e/classComPWA_1_1TableFormater.html#acc75a2cfec8431a729485c1b8b2df176',1,'ComPWA::TableFormater']]],
-  ['lastupdate',['lastUpdate',['../dc/db5/classComPWA_1_1progressBar.html#ae0906a54785988a57db44c5561a20f28',1,'ComPWA::progressBar']]],
-  ['line_5fcolor',['line_color',['../dc/df6/structNeatPlotting_1_1LineStyle.html#a13920387c307568406fc0ad81a0a6e2f',1,'NeatPlotting::LineStyle']]],
-  ['line_5fstyle',['line_style',['../dc/df6/structNeatPlotting_1_1LineStyle.html#a308a62740d5b960f81a5cb6f8583047b',1,'NeatPlotting::LineStyle::line_style()'],['../d4/d1e/structNeatPlotting_1_1DataObjectStyle.html#a791afe1e54ccbb22aa531d34272570d1',1,'NeatPlotting::DataObjectStyle::line_style()']]],
-  ['line_5fwidth',['line_width',['../dc/df6/structNeatPlotting_1_1LineStyle.html#a0be5a0408d1aefe4b231e88e827f8c70',1,'NeatPlotting::LineStyle']]],
-  ['log_5fscale',['log_scale',['../d2/d75/structNeatPlotting_1_1AxisStyle.html#a0668569765540310267c6d81a29cad8a',1,'NeatPlotting::AxisStyle']]],
-  ['low',['low',['../da/d81/structNeatPlotting_1_1AxisRange.html#a8087cc40b2317f29a53ef27c1f959e49',1,'NeatPlotting::AxisRange']]]
+  ['m2',['M2',['../classComPWA_1_1Physics_1_1EvtGen_1_1DalitzKinematics.html#a313a939ab8d76ea9f6fcff2614905732',1,'ComPWA::Physics::EvtGen::DalitzKinematics']]],
+  ['mass',['Mass',['../classComPWA_1_1ParticleProperties.html#a9b48aadaaacc0052c13a01979127cfbb',1,'ComPWA::ParticleProperties::Mass()'],['../structComPWA_1_1Physics_1_1Dynamics_1_1InputInfo.html#ad05195c98881bf5a04c7aa9804782c74',1,'ComPWA::Physics::Dynamics::InputInfo::Mass()']]],
+  ['massa',['MassA',['../classComPWA_1_1Physics_1_1Dynamics_1_1Coupling.html#a4245853b5839e3b6439ff699584aa0b1',1,'ComPWA::Physics::Dynamics::Coupling']]],
+  ['massb',['MassB',['../classComPWA_1_1Physics_1_1Dynamics_1_1Coupling.html#a858047300a97bd1cc6ba9742262f7479',1,'ComPWA::Physics::Dynamics::Coupling']]],
+  ['maximumweight',['MaximumWeight',['../classComPWA_1_1Data_1_1Root_1_1RootGenerator.html#a1672bd4b5a7b8b340b0128a8012e382b',1,'ComPWA::Data::Root::RootGenerator']]],
+  ['mcsample',['McSample',['../structenergyPar.html#a06f27d3e571b8f98f6734b083e1ce8f1',1,'energyPar']]],
+  ['mersennetwisterrandomgenerator',['MersenneTwisterRandomGenerator',['../classComPWA_1_1StdUniformRealGenerator.html#a61882c62ad39c6b638457a72671ae236',1,'ComPWA::StdUniformRealGenerator']]],
+  ['mesonradius',['MesonRadius',['../structComPWA_1_1Physics_1_1Dynamics_1_1InputInfo.html#a920e649ccd6a3205b137ed1d511593cb',1,'ComPWA::Physics::Dynamics::InputInfo']]],
+  ['modelsqrts4230',['modelSqrtS4230',['../SimFit_8cpp.html#a5989f51f1ddd9a2de43aa789a5ee5c4d',1,'SimFit.cpp']]],
+  ['modelsqrts4260',['modelSqrtS4260',['../SimFit_8cpp.html#a285854036589de05762384f3a351125a',1,'SimFit.cpp']]],
+  ['modeltree',['ModelTree',['../classComPWA_1_1Physics_1_1IntensityBuilderXML.html#a99422fd402f236b2ecbcf72f6b588945',1,'ComPWA::Physics::IntensityBuilderXML']]],
+  ['multicomplexvalues',['MultiComplexValues',['../classComPWA_1_1FunctionTree_1_1ParameterList.html#a036f4bbbb4b6a62eab2db27a76ab878b',1,'ComPWA::FunctionTree::ParameterList']]],
+  ['multidoublevalues',['MultiDoubleValues',['../classComPWA_1_1FunctionTree_1_1ParameterList.html#ad3e57eb945e75652a3007bad7420aa97',1,'ComPWA::FunctionTree::ParameterList']]],
+  ['multiintvalues',['MultiIntValues',['../classComPWA_1_1FunctionTree_1_1ParameterList.html#a39df34d273523e5e0164a9c332e91ffa',1,'ComPWA::FunctionTree::ParameterList']]],
+  ['myparticles',['myParticles',['../DalitzFitApp_8cpp.html#ae3e28ed6f4dfdd5aa2c356355381d7bb',1,'myParticles():&#160;DalitzFitApp.cpp'],['../EvtGenFit_8cpp.html#ae3e28ed6f4dfdd5aa2c356355381d7bb',1,'myParticles():&#160;EvtGenFit.cpp']]]
 ];

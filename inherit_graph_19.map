@@ -1,6 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dc/d1d/classComPWA_1_1IEstimator.html" title="ComPWA::IEstimator" alt="" coords="5,77,155,104"/>
-<area shape="rect" id="node2" href="$d9/ddf/classComPWA_1_1Estimator_1_1ChiOneD_1_1ChiOneD.html" title="ComPWA::Estimator::\lChiOneD::ChiOneD" alt="" coords="203,5,357,46"/>
-<area shape="rect" id="node3" href="$d5/d71/classComPWA_1_1Estimator_1_1MinLogLH.html" title="Negative Log Likelihood&#45;Estimator. " alt="" coords="203,70,357,111"/>
-<area shape="rect" id="node4" href="$d2/d37/classComPWA_1_1Estimator_1_1SumMinLogLH.html" title="ComPWA::Estimator::\lSumMinLogLH" alt="" coords="203,135,357,177"/>
+<area shape="rect" id="node2" href="$classComPWA_1_1FunctionTree_1_1TreeNode.html" title="TreeNode is the basic building block of the FunctionTree. " alt="" coords="220,27,385,69"/>
+<area shape="rect" id="node3" href="$classComPWA_1_1FunctionTree_1_1ParObserver.html" title="ParObserver Base class parameter observer. " alt="" coords="6,57,171,98"/>
 </map>

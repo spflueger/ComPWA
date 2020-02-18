@@ -1,18 +1,11 @@
 var searchData=
 [
-  ['edm',['edm',['../d9/d68/classComPWA_1_1Optimizer_1_1Geneva_1_1GenevaResult.html#ae61f9e1f1aaf13be23727631eabe1a69',1,'ComPWA::Optimizer::Geneva::GenevaResult::edm()'],['../d7/df4/classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html#a458c09fd20f6a3158adf5ce3fab59027',1,'ComPWA::Optimizer::Minuit2::MinuitResult::edm()']]],
-  ['edmabovemax',['edmAboveMax',['../d9/d68/classComPWA_1_1Optimizer_1_1Geneva_1_1GenevaResult.html#a1525176df6689b9feaa6eacbf6c8294b',1,'ComPWA::Optimizer::Geneva::GenevaResult::edmAboveMax()'],['../d7/df4/classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html#a63530880ecfa990a2aaa7e12d4334508',1,'ComPWA::Optimizer::Minuit2::MinuitResult::edmAboveMax()']]],
-  ['eff',['eff',['../d1/da0/classComPWA_1_1dataPoint.html#a7ebf14bb6f3ffb46f272e54c479c114a',1,'ComPWA::dataPoint']]],
-  ['effhist',['effHist',['../df/d4c/classComPWA_1_1DataReader_1_1RootEfficiency.html#a98d205e60b93c1792d7555093cc18a9d',1,'ComPWA::DataReader::RootEfficiency']]],
-  ['enablehesse',['enableHesse',['../dc/dc6/classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitIF.html#ae8556fdc4a70e36cb2ba6f56b6c89d5e',1,'ComPWA::Optimizer::Minuit2::MinuitIF']]],
-  ['enableminos',['enableMinos',['../dc/dc6/classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitIF.html#ad340430b02727a59dcb1c1d74b614204',1,'ComPWA::Optimizer::Minuit2::MinuitIF']]],
-  ['err_5f',['err_',['../da/dd8/classComPWA_1_1ComplexParameter.html#aa09d07b8b9ed2b37306748e3c8d179ef',1,'ComPWA::ComplexParameter::err_()'],['../d2/d19/classComPWA_1_1IntegerParameter.html#ae0e61d4307cfbd573467bbf0b1ba3bd8',1,'ComPWA::IntegerParameter::err_()'],['../dd/d6e/classComPWA_1_1BoolParameter.html#abb5cdac298a0b31427bd558b5b60823b',1,'ComPWA::BoolParameter::err_()']]],
-  ['errordef',['errorDef',['../d9/d68/classComPWA_1_1Optimizer_1_1Geneva_1_1GenevaResult.html#a56850855db51ddd8aa5f6cc008de8668',1,'ComPWA::Optimizer::Geneva::GenevaResult::errorDef()'],['../d7/df4/classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html#a2921bfb49e652d921d45f61e5c4e1a92',1,'ComPWA::Optimizer::Minuit2::MinuitResult::errorDef()']]],
-  ['errorhigh',['errorHigh',['../d1/d81/classComPWA_1_1DoubleParameter.html#a55a451c14ea368d049ddefcc947f4db1',1,'ComPWA::DoubleParameter']]],
-  ['errorlow',['errorLow',['../d1/d81/classComPWA_1_1DoubleParameter.html#a14ef6edf795c1b85423f55370278613d',1,'ComPWA::DoubleParameter']]],
-  ['errortype',['errorType',['../d1/d81/classComPWA_1_1DoubleParameter.html#a7bbe0a0cc6c572cba7096d6f42b9cc87',1,'ComPWA::DoubleParameter']]],
-  ['est',['est',['../d7/df4/classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html#ab7445a3600dcf18c20fd4a572cddcc88',1,'ComPWA::Optimizer::Minuit2::MinuitResult']]],
-  ['estimator',['estimator',['../dc/dc6/classComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitIF.html#a0ce800bdd494c94d2a82cd2626613317',1,'ComPWA::Optimizer::Minuit2::MinuitIF']]],
-  ['event',['event',['../d9/d48/classComPWA_1_1Tools_1_1RootGenerator.html#a9f19135c95027ba23a6778aaecd92bd2',1,'ComPWA::Tools::RootGenerator']]],
-  ['exists',['exists',['../d4/dd0/classComPWA_1_1Physics_1_1QFT_1_1Conversion.html#a937210242c1805a5212e04559614d4c3',1,'ComPWA::Physics::QFT::Conversion::exists()'],['../d0/d63/classComPWA_1_1Physics_1_1QFT_1_1Conversion_3_01__T_00_01__T_01_4.html#a6370e7b7c114acc6cba7fdbf6457fe54',1,'ComPWA::Physics::QFT::Conversion&lt; _T, _T &gt;::exists()']]]
+  ['edm',['Edm',['../structComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html#a8272acdbc526d6347f18276ccec2d5db',1,'ComPWA::Optimizer::Minuit2::MinuitResult']]],
+  ['edmabovemax',['EdmAboveMax',['../structComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html#a41ea33002877d6df6de0ac5309f73a5d',1,'ComPWA::Optimizer::Minuit2::MinuitResult']]],
+  ['effhist',['effHist',['../classComPWA_1_1Data_1_1Root_1_1RootEfficiency.html#abdaf9420b1ec6e25e1386329548d9da0',1,'ComPWA::Data::Root::RootEfficiency']]],
+  ['error',['Error',['../structComPWA_1_1FitParameter.html#af9d53a9ca9d5f0ecfe3fd769d05d806f',1,'ComPWA::FitParameter::Error()'],['../classComPWA_1_1FunctionTree_1_1FitParameter.html#a5616fd91997aae4539fb3e8693f88716',1,'ComPWA::FunctionTree::FitParameter::Error()'],['../structComPWA_1_1Tools_1_1FitFraction.html#aeb77d1bd3aadf83366929be38edae798',1,'ComPWA::Tools::FitFraction::Error()']]],
+  ['errordef',['ErrorDef',['../structComPWA_1_1Optimizer_1_1Minuit2_1_1MinuitResult.html#a82755759407e4c59f581e5c196477241',1,'ComPWA::Optimizer::Minuit2::MinuitResult']]],
+  ['errtype',['ErrType',['../classComPWA_1_1FunctionTree_1_1FitParameter.html#adac7907a484f435fb5490a51bf868e2a',1,'ComPWA::FunctionTree::FitParameter']]],
+  ['evtpars',['evtPars',['../classComPWA_1_1Physics_1_1EvtGen_1_1EvtGenIF.html#a09e41347bed599b203209b97d89ba9e8',1,'ComPWA::Physics::EvtGen::EvtGenIF']]],
+  ['expa2n2',['expa2n2',['../Faddeeva_8cc.html#a979fa40eea71b30eece8bbec27dba3c4',1,'Faddeeva.cc']]]
 ];

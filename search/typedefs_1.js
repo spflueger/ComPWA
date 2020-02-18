@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ampitr',['ampItr',['../d8/d14/namespaceComPWA_1_1Physics.html#a0930b349fe8acc1e70fcbf0365cc1a07',1,'ComPWA::Physics']]]
+  ['cmplx',['cmplx',['../Faddeeva_8cc.html#a57f4abacd6cf20e044c249fb162f706c',1,'Faddeeva.cc']]]
 ];
