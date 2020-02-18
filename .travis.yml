@@ -86,6 +86,14 @@ jobs:
       env:
         - TASK="clang, ROOT v6.18"
         - ROOTBIN="v6.18.04.macosx64-10.14-clang100"
+      script:
+        - mkdir $BASEPATH/build
+        - cd $BASEPATH/build
+        - cmake -DCMAKE_INSTALL_PREFIX=$BASEPATH/../install $BASEPATH
+        - cmake --build . -- -j 2
+        # Do not run tests for osx since it will fail. The reason is that
+        # the precompiled ROOT libraries do not have RPATH set properly.
+        - make install
 
     - os: linux # test gcc7 build
       dist: xenial
@@ -119,6 +127,13 @@ jobs:
         apt:
           packages:
             - lcov
+      script:
+        - mkdir $BASEPATH/build
+        - cd $BASEPATH/build
+        - cmake -DCODE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$BASEPATH/../install $BASEPATH
+        - cmake --build . -- -j 2
+        - ctest -j 2 --output-on-failure
+        - make install
       after_success:
         - if [ -f "$BASEPATH/build-coverity/cov-int/scm_log.txt" ]; then
           cat $BASEPATH/build-coverity/cov-int/scm_log.txt
@@ -154,15 +169,7 @@ jobs:
 script:
   - mkdir $BASEPATH/build
   - cd $BASEPATH/build
-  - if [ "$TASK" == "gcc5, ROOT v6.16 + code coverage" ]; then
-    cmake -DCODE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$BASEPATH/../install $BASEPATH;
-    else
-    cmake -DCMAKE_INSTALL_PREFIX=$BASEPATH/../install $BASEPATH;
-    fi
+  - cmake -DCMAKE_INSTALL_PREFIX=$BASEPATH/../install $BASEPATH
   - cmake --build . -- -j 2
-  # Do not run tests for osx since it will fail. The reason is that
-  # the precompiled ROOT libraries do not have RPATH set properly.
-  - if [ "$TRAVIS_OS_NAME" != "osx" ]; then
-    ctest -j 2 --output-on-failure;
-    fi
+  - ctest -j 2 --output-on-failure
   - make install
