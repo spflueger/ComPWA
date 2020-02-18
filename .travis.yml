@@ -40,9 +40,9 @@ install:
   - source root/bin/thisroot.sh
 
 jobs:
-  exclude:
-    - if: type = pull_request
-      os: linux
+  include:
+    - os: linux
+      if: type != pull_request
       dist: xenial
       compiler: gcc # Xenial: gcc-5.4
       env:
@@ -64,7 +64,6 @@ jobs:
           branch_pattern: master
       script: True
 
-  include:
     - os: linux # test Doxygen
       dist: xenial
       env:
