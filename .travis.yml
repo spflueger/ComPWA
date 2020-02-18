@@ -74,7 +74,7 @@ jobs:
         deploy_key: github_deploy_key
         cleanup: false
         edge: true
-        repo: spflueger/ComPWA.git
+        repo: spflueger/ComPWA
         target_branch: gh-pages
         local_dir: "$BASEPATH/doc/html"
         verbose: true
