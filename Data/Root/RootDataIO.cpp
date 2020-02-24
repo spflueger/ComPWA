@@ -2,8 +2,6 @@
 // This file is part of the ComPWA framework, check
 // https://github.com/ComPWA/ComPWA/license.txt for details.
 
-#include <list>
-
 #include "RootDataIO.hpp"
 
 #include "TChain.h"
@@ -24,9 +22,9 @@ namespace ComPWA {
 namespace Data {
 namespace Root {
 
-std::vector<ComPWA::Event> readData(const std::string &InputFilePath,
-                                    const std::string &TreeName,
-                                    long long NumberOfEventsToRead) {
+ComPWA::EventList readData(const std::string &InputFilePath,
+                           const std::string &TreeName,
+                           long long NumberOfEventsToRead) {
   // Ignore custom streamer warning and error message for missing trees
   auto temp_ErrorIgnoreLevel = gErrorIgnoreLevel;
   gErrorIgnoreLevel = kBreak;
@@ -51,53 +49,69 @@ std::vector<ComPWA::Event> readData(const std::string &InputFilePath,
                               "Particles and/or weight branch");
 
   // Set branch addresses
-  TClonesArray Particles("TParticle");
+  TClonesArray Particles("TLorentzVector");
   TClonesArray *ParticlesPointer(&Particles);
   double Weight;
   TheChain.GetBranch("Particles")->SetAutoDelete(false);
   TheChain.SetBranchAddress("Particles", &ParticlesPointer);
   TheChain.SetBranchAddress("weight", &Weight);
 
-  std::vector<ComPWA::Event> Events;
-  Events.reserve(NumberOfEventsToRead);
+  EventList EvtList;
+  EvtList.Events.reserve(NumberOfEventsToRead);
+
+  // define constant event header
+  // once the root file structure is changed accordingly
+  // this block of code can be exchange with something better
+  Particles.Clear();
+  TheChain.GetEntry(0);
+  size_t IndexCounter(0);
+  for (auto part = 0; part < Particles.GetEntries(); part++) {
+    auto Particle = dynamic_cast<TParticle *>(Particles.At(part));
+    if (!Particle)
+      continue;
+    EvtList.Header.insert(
+        std::make_pair(IndexCounter++, Particle->GetPdgCode()));
+  } // end header block
 
   for (Long64_t i = 0; i < NumberOfEventsToRead; ++i) {
     Particles.Clear();
     TheChain.GetEntry(i);
 
-    Event TheEvent;
+    Event Evt;
 
     auto NumberOfParticles = Particles.GetEntries();
+    if (IndexCounter != NumberOfParticles) {
+      LOG(ERROR) << "RootDataIO::readData(): Particle count mismatch in Event "
+                 << i << "! Skipping Event...";
+    }
     for (auto part = 0; part < NumberOfParticles; part++) {
-      auto TheParticle = dynamic_cast<TParticle *>(Particles.At(part));
-      if (!TheParticle)
+      auto Particle = dynamic_cast<TParticle *>(Particles.At(part));
+      if (!Particle)
         continue;
-      TheEvent.ParticleList.push_back(
-          Particle(TheParticle->Px(), TheParticle->Py(), TheParticle->Pz(),
-                   TheParticle->Energy(), TheParticle->GetPdgCode()));
-    } // end particle loop
-    TheEvent.Weight = Weight;
+      Evt.FourMomenta.push_back(FourMomentum(
+          Particle->Px(), Particle->Py(), Particle->Pz(), Particle->Energy()));
+    }
+    Evt.Weight = Weight;
 
-    Events.push_back(TheEvent);
-  } // end event loop
+    EvtList.Events.push_back(Evt);
+  }
 
   gErrorIgnoreLevel = temp_ErrorIgnoreLevel;
-  return Events;
+  return EvtList;
 }
 
-void writeData(const std::vector<ComPWA::Event> &Events,
-               const std::string &OutputFileName, const std::string &TreeName,
-               bool OverwriteFile) {
+void writeData(const EventList &EvtList, const std::string &OutputFileName,
+               const std::string &TreeName, bool OverwriteFile) {
   // Ignore custom streamer warning
   auto temp_ErrorIgnoreLevel = gErrorIgnoreLevel;
   gErrorIgnoreLevel = kBreak;
 
-  if (0 == Events.size()) {
+  if (0 == EvtList.Events.size()) {
     LOG(ERROR) << "Root::writeData(): no events given!";
     return;
   }
 
-  LOG(INFO) << "Root::writeData(): writing vector of " << Events.size()
+  LOG(INFO) << "Root::writeData(): writing vector of " << EvtList.Events.size()
             << " events to file " << OutputFileName;
 
   std::string WriteFlag{"UPDATE"};
@@ -112,25 +126,31 @@ void writeData(const std::vector<ComPWA::Event> &Events,
   // TTree branch variables
   TTree TheTree(TreeName.c_str(), TreeName.c_str());
   auto ParticlesPointer =
-      new TClonesArray("TParticle", Events[0].ParticleList.size());
+      new TClonesArray("TParticle", EvtList.Events[0].FourMomenta.size());
   double Weight;
   TheTree.Branch("Particles", &ParticlesPointer);
   TheTree.Branch("weight", &Weight, "weight/D");
   auto &Particles = *ParticlesPointer;
 
-  for (auto const &Event : Events) {
+  double Mass = ComPWA::calculateInvariantMass(EvtList.Events[0]);
+  TLorentzVector motherMomentum(0, 0, 0, Mass);
+  for (size_t i = 0; i < EvtList.Events[0].FourMomenta.size(); ++i) {
+    Particles[i] = new TParticle(EvtList.Header.at(i), 1, 0, 0, 0, 0,
+                                 TLorentzVector(), motherMomentum);
+  }
+
+  for (auto const &Event : EvtList.Events) {
     Particles.Clear();
     Weight = Event.Weight;
-    double Mass = ComPWA::calculateInvariantMass(Event);
-    TLorentzVector motherMomentum(0, 0, 0, Mass);
-    for (unsigned int i = 0; i < Event.ParticleList.size(); ++i) {
-      auto &Particle = Event.ParticleList[i];
-      auto FourMom(Particle.fourMomentum());
-      TLorentzVector oldMomentum(FourMom.px(), FourMom.py(), FourMom.pz(),
-                                 FourMom.e());
-      Particles[i] = new TParticle(Particle.pid(), 1, 0, 0, 0, 0, oldMomentum,
-                                   motherMomentum);
-      // TClonesArray owns its objects
+
+    for (unsigned int i = 0; i < Event.FourMomenta.size(); ++i) {
+      auto FourMom(Event.FourMomenta[i]);
+      TLorentzVector Momentum(FourMom.px(), FourMom.py(), FourMom.pz(),
+                              FourMom.e());
+      auto Particle = dynamic_cast<TParticle *>(Particles.At(i));
+      if (!Particle)
+        continue;
+      Particle->SetMomentum(Momentum);
     }
     TheTree.Fill();
   }

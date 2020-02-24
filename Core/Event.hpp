@@ -7,6 +7,7 @@
 
 #include "Core/Particle.hpp"
 
+#include <unordered_map>
 #include <vector>
 
 namespace ComPWA {
@@ -16,8 +17,13 @@ namespace ComPWA {
 /// The information is stored in form of a Particle list (FourMomentum).
 ///
 struct Event {
-  std::vector<Particle> ParticleList;
+  std::vector<FourMomentum> FourMomenta;
   double Weight = 1.0;
+};
+
+struct EventList {
+  const std::vector<int> Pids = {};
+  const std::vector<Event> Events = {};
 };
 
 std::ostream &operator<<(std::ostream &stream, const Event &ev);
